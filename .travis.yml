@@ -1,0 +1,5 @@
+language: ruby
+rbenv:
+- 2.7.2
+addons:
+  postgresql: 9.6
