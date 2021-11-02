@@ -9,11 +9,11 @@ addons:
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
-deploy:
-  provider:
-  api_key:
-    secure:
-  app:
-  run:
-  on:
-    branch: main
+# deploy:
+#   provider:
+#   api_key:
+#     secure:
+#   app:
+#   run:
+#   on:
+#     branch: main
