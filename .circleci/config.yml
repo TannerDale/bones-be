@@ -13,6 +13,12 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.2
+      - image: postgres:9.5
+        environment:
+          POSTGRES_USER: bonez-be
+          POSTGRES_DB: bonez-be_test
+          POSTGRES_PASSWORD: ""
+
     executor: ruby/default
     steps:
       - checkout
