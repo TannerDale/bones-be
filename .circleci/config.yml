@@ -21,6 +21,18 @@ jobs:
           command: sudo gem install bundler -v 2.2.30
       - ruby/bundle-install
 
+      - run: mv config/database.yml.sample config/database.yml
+      - run: RAILS_ENV=test bundle exec rake db:create
+      - run: bundle exec rake db:setup
+
+  # Run the tests
+      - type: shell
+        command: |
+          bundle exec rspec --profile 10 \
+                            --out test_results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
