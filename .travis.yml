@@ -1,8 +1,6 @@
 language: ruby
 rbenv:
 - 2.7.2
-script:
-  - sudo gem install bundler -v 2.2.30
 addons:
   postgresql: 9.6
 script:
