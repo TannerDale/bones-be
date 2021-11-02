@@ -13,7 +13,6 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.2
-
     executor: ruby/default
     steps:
       - checkout
@@ -21,9 +20,12 @@ jobs:
           name: Which bundler?
           command: sudo gem install bundler -v 2.2.30
       - ruby/bundle-install
-  test:
-    - run:
-        name: RSpec
+
+      - run:
+        name: DB setup
+        command: rails db:{create,migrate} ENV=test
+      - run:
+        name: RSPEC
         command: bundle exec rspec
 
 # Invoke jobs via workflows
@@ -33,4 +35,3 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build
-
