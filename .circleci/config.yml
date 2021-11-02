@@ -13,14 +13,29 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.2
+      - environment:
+          RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          DATABASE_URL: postgres://bonez-be-user@127.0.0.1/bonez-be_test
+
     executor: ruby-postgres
     steps:
       - checkout
+      - resolve-dependencies
       - run:
           name: Which bundler?
           command: sudo gem install bundler -v 2.2.30
       - ruby/bundle-install
-      - resolve-dependencies
       - run-linter
       - setup-postgres
-      - run-tests-rails
+      - run-tests-rspec
+
+
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - build
