@@ -21,8 +21,8 @@ jobs:
           command: sudo gem install bundler -v 2.2.30
       - ruby/bundle-install
       - run:
-        name: RSpec
-        command: bundle exec rspec
+          name: RSpec
+          command: bundle exec rspec
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
