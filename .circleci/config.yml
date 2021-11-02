@@ -21,16 +21,10 @@ jobs:
     executor: ruby-postgres
     steps:
       - checkout
-      - resolve-dependencies
       - run:
           name: Which bundler?
           command: sudo gem install bundler -v 2.2.30
-      - ruby/bundle-install
-      - run-linter
-      - setup-postgres
-      - run-tests-rspec
-
-
+      - run: bundle exec rspec
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
