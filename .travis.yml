@@ -2,7 +2,7 @@ language: ruby
 rbenv:
 - 2.7.2
 addons:
-  postgresql: 13
+  postgresql: 9.6
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
