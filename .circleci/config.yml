@@ -22,7 +22,7 @@ jobs:
           command: sudo gem install bundler -v 2.2.30
       - ruby/bundle-install
 
-      - run: RAILS_ENV=test bundle exec rake db:create
+      - run: RAILS_ENV=test bundle exec rake db:schema:dump
       - run: bundle exec rake db:setup
 
   # Run the tests
