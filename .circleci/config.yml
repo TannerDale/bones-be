@@ -20,10 +20,6 @@ jobs:
           name: Which bundler?
           command: sudo gem install bundler -v 2.2.30
       - ruby/bundle-install
-
-      - run:
-        name: DB setup
-        command: rails db:{create,migrate}
       - run:
         name: RSpec
         command: bundle exec rspec
