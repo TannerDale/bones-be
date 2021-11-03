@@ -3,17 +3,20 @@ require 'rails_helper'
 RSpec.describe 'new pet' do
   it "can create a new pet" do
     pet_params = ({
-      name: 'Butters',
-      user_id: 1000,
-      size: 0,
-      breed: 'French Bulldog',
-      vaccinated: true,
-      trained: false,
-      sex: 'Male',
-      age: 2
-      })
+                    name: 'Butters',
+                    user_id: 1000,
+                    size: 0,
+                    breed: 'French Bulldog',
+                    vaccinated: 1,
+                    trained: 0,
+                    sex: 'Male',
+                    age: 2
+                  })
+
     headers = {'CONTENT_TYPE': 'application/json'}
+
     post '/api/v1/pets/', headers: headers, params: JSON.generate(pet: pet_params)
+
     expect(response).to be_successful
 
     pet = JSON.parse(response.body, symbolize_names: true)
@@ -35,15 +38,17 @@ RSpec.describe 'new pet' do
 
   it "missing param returns 404" do
     pet_params = ({
-      user_id: 1000,
-      size: 0,
-      breed: 'French Bulldog',
-      vaccinated: true,
-      trained: false,
-      sex: 'Male',
-      age: 2
-      })
+                    user_id: 1000,
+                    size: 0,
+                    breed: 'French Bulldog',
+                    vaccinated: 1,
+                    trained: 0,
+                    sex: 'Male',
+                    age: 2
+                  })
+
     headers = {'CONTENT_TYPE': 'application/json'}
+
     post '/api/v1/pets/', headers: headers, params: JSON.generate(pet: pet_params)
 
     expect(response).to_not be_successful
