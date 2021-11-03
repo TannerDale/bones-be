@@ -23,3 +23,6 @@
 /config/master.key
 /coverage/
 coverage/
+
+# Ignore application configuration
+/config/application.yml
