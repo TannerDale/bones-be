@@ -15,7 +15,6 @@ deploy:
     secure: ALrheDR3YkwIQ+9tk4srivCPY/2maTsJ0bGkBMvK9Xz3kjbTN8ctEMvzUYtOv6Vt86cII4Ehvf/tlwP6t8lsJjysKkTRQ6Ixcp1OO4Cx8NV9z6Wiw4YoNPcjl51KhcAIyjiJgPUpFXdJRI+nomiIoq3YKsEALlm1MWMl2lFmY6I1v/B8A89yes2ztc/mECxxSOG8mLTLMBfuH4TEpYqkleX1dWESen8LA2ZGKHV9quyU6D/nKTw4puNeWaenm8d/44Cb0XGDe5xK5F1/PaX3PCqcJnAUGhCD/X/Fmu2rgax8+ENZSh3cwFLA1O3RM4oA26iI7MvD7Hz+uat3O9ONlEaEEseZz/Cfi+QF9D720Bl2Ury0Lu+H/IU9D6QdV/UoafiLzxevu7qlAjGbAmozE7QLGAH49zmg83BHsE//znHQRrtvno5V3yNH3JBFi4imPMOhSiWb4a/zhGLSwtoeBEqwjI2mIAO9G4Mflx3IJguSzbxsB7CLf8BFX0cg3CNnBROJyivpDM7FAUI3CYcuEPhuL3iNJWkgP5qeOpm8NbPAcdcGz2E8GgjxIA1uZThA/XGV2mLyIwArJsPGElf96kCwjxlfJeHpKn0vIpv/4M9Lo21e2TTwWLzLWRW1Xvwe4cCQqnXFF7yHDc2uJAjKdspTZ2zuktS8gqrOR53HeTU=
   app: bones-be
   run:
-  - gem install bundler -v 2.2.30
   - rake db:migrate
   on:
     branch: main
