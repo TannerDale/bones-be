@@ -2,7 +2,6 @@ language: ruby
 rbenv:
 - 2.7.2
 before_install:
-- bundle lock --add-platform x86_64-linux
 - gem install bundler -v 2.2.30
 addons:
   postgresql: 9.6
