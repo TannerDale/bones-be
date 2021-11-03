@@ -8,5 +8,7 @@ RSpec.describe Pet, type: :model do
 
   describe 'enums' do
     it { should define_enum_for(:size).with_values([:small, :medium, :large]) }
+    it { should define_enum_for(:vaccinated).with_values([:false, :true]) }
+    it { should define_enum_for(:trained).with_values([:no, :yes]) }
   end
 end
