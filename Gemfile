@@ -19,6 +19,7 @@ gem 'puma', '~> 3.11'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'travis'
+gem 'jsonapi-serializer'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
@@ -31,6 +32,8 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'simplecov'
+  gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :development do
