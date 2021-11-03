@@ -110,9 +110,7 @@ GEM
     net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
     nio4r (2.5.8)
-    nokogiri (1.12.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
+    nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
     public_suffix (4.0.6)
@@ -200,8 +198,7 @@ GEM
     websocket-extensions (0.1.5)
 
 PLATFORMS
-  arm64-darwin-20
-  x86_64-linux
+  x86_64-darwin-20
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -219,4 +216,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.2.30
+   2.2.17
