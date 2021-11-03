@@ -4,7 +4,6 @@ rbenv:
 before_install:
 - gem install bundler -v 2.2.30
 - bundle lock --add-platform x86_64-linux
-- bundle install
 addons:
   postgresql: 9.6
 script:
