@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-74fc997579-htg7x; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4987'
       Server:
       - envoy
       Ratelimit-Dailylimit:
       - '5000'
-      Ratelimit-Remaining:
-      - '4988'
       Ratelimit-Resettime:
       - '2021-11-04T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-74fc997579-tqp7b; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
       X-Zipkin-Id:
-      - 70d252ea351c7e6f
+      - 769ff784ed09228e
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-113-185-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-113-185-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 03 Nov 2021 22:47:16 GMT
+      - Wed, 03 Nov 2021 22:47:47 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8244-DEN
+      - cache-den8256-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -70,7 +70,7 @@ http_interactions:
         "review_count": 113, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "noodles", "title": "Noodles"}, {"alias": "coffee", "title": "Coffee & Tea"}],
         "rating": 4.5, "coordinates": {"latitude": 39.7402, "longitude": -104.97194},
-        "transactions": ["pickup", "delivery"], "location": {"address1": "1201 E Colfax
+        "transactions": ["delivery", "pickup"], "location": {"address1": "1201 E Colfax
         Ave", "address2": "Ste 102", "address3": "", "city": "Denver", "zip_code":
         "80218", "country": "US", "state": "CO", "display_address": ["1201 E Colfax
         Ave", "Ste 102", "Denver, CO 80218"]}, "phone": "+17209171000", "display_phone":
@@ -80,7 +80,7 @@ http_interactions:
         "review_count": 493, "categories": [{"alias": "venues", "title": "Venues &
         Event Spaces"}, {"alias": "irish_pubs", "title": "Irish Pub"}, {"alias": "burgers",
         "title": "Burgers"}], "rating": 4.0, "coordinates": {"latitude": 39.7402,
-        "longitude": -104.97194}, "transactions": ["pickup", "delivery"], "price":
+        "longitude": -104.97194}, "transactions": ["delivery", "pickup"], "price":
         "$$", "location": {"address1": "1201 E Colfax Ave", "address2": null, "address3":
         "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
         "display_address": ["1201 E Colfax Ave", "Denver, CO 80218"]}, "phone": "+13038391394",
@@ -91,7 +91,7 @@ http_interactions:
         "review_count": 267, "categories": [{"alias": "lounges", "title": "Lounges"},
         {"alias": "polish", "title": "Polish"}, {"alias": "breakfast_brunch", "title":
         "Breakfast & Brunch"}], "rating": 3.5, "coordinates": {"latitude": 39.74019,
-        "longitude": -104.9723099}, "transactions": ["pickup", "delivery"], "price":
+        "longitude": -104.9723099}, "transactions": ["delivery", "pickup"], "price":
         "$$", "location": {"address1": "1509 Marion St", "address2": "", "address3":
         "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
         "display_address": ["1509 Marion St", "Denver, CO 80218"]}, "phone": "+13038306922",
@@ -102,7 +102,7 @@ http_interactions:
         "review_count": 98, "categories": [{"alias": "hotdogs", "title": "Fast Food"},
         {"alias": "burgers", "title": "Burgers"}, {"alias": "icecream", "title": "Ice
         Cream & Frozen Yogurt"}], "rating": 3.0, "coordinates": {"latitude": 39.7397363,
-        "longitude": -104.9771641}, "transactions": ["pickup", "delivery"], "price":
+        "longitude": -104.9771641}, "transactions": ["delivery", "pickup"], "price":
         "$", "location": {"address1": "808 E Colfax Ave", "address2": "", "address3":
         "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
         "display_address": ["808 E Colfax Ave", "Denver, CO 80218"]}, "phone": "+13038308060",
@@ -113,7 +113,7 @@ http_interactions:
         "review_count": 224, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
         "mexican", "title": "Mexican"}, {"alias": "breakfast_brunch", "title": "Breakfast
         & Brunch"}], "rating": 4.0, "coordinates": {"latitude": 39.74024120000001,
-        "longitude": -104.9632766}, "transactions": ["pickup", "delivery"], "price":
+        "longitude": -104.9632766}, "transactions": ["delivery", "pickup"], "price":
         "$", "location": {"address1": "2001 E Colfax Ave", "address2": "", "address3":
         "", "city": "Denver", "zip_code": "80206", "country": "US", "state": "CO",
         "display_address": ["2001 E Colfax Ave", "Denver, CO 80206"]}, "phone": "+17207232703",
@@ -124,18 +124,18 @@ http_interactions:
         "review_count": 440, "categories": [{"alias": "tradamerican", "title": "American
         (Traditional)"}, {"alias": "bars", "title": "Bars"}, {"alias": "breakfast_brunch",
         "title": "Breakfast & Brunch"}], "rating": 3.5, "coordinates": {"latitude":
-        39.7429773002728, "longitude": -104.970145}, "transactions": ["pickup", "delivery"],
-        "price": "$$", "location": {"address1": "1320 E 17th Ave", "address2": "",
-        "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
-        "CO", "display_address": ["1320 E 17th Ave", "Denver, CO 80218"]}, "phone":
-        "+13038136688", "display_phone": "(303) 813-6688", "distance": 828.7890893100515},
+        39.7429773002728, "longitude": -104.970145}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "1320 E 17th Ave", "address2":
+        "", "address3": "", "city": "Denver", "zip_code": "80218", "country": "US",
+        "state": "CO", "display_address": ["1320 E 17th Ave", "Denver, CO 80218"]},
+        "phone": "+13038136688", "display_phone": "(303) 813-6688", "distance": 828.7890893100515},
         {"id": "ifFJPXzMMPMDn-RbXrcnjw", "alias": "patxis-pizza-denver-5", "name":
         "Patxi''s Pizza", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/c8Wh43BxSCqZOXUshfS-oQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/patxis-pizza-denver-5?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 438, "categories": [{"alias": "pizza", "title": "Pizza"},
         {"alias": "salad", "title": "Salad"}, {"alias": "italian", "title": "Italian"}],
         "rating": 4.0, "coordinates": {"latitude": 39.74304, "longitude": -104.96859},
-        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
         "1598 E 17th Ave", "address2": null, "address3": "", "city": "Denver", "zip_code":
         "80218", "country": "US", "state": "CO", "display_address": ["1598 E 17th
         Ave", "Denver, CO 80218"]}, "phone": "+13038328000", "display_phone": "(303)
@@ -146,7 +146,7 @@ http_interactions:
         "review_count": 38, "categories": [{"alias": "tradamerican", "title": "American
         (Traditional)"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias":
         "burgers", "title": "Burgers"}], "rating": 4.5, "coordinates": {"latitude":
-        39.74299, "longitude": -104.96615}, "transactions": ["pickup", "delivery"],
+        39.74299, "longitude": -104.96615}, "transactions": ["delivery", "pickup"],
         "price": "$$", "location": {"address1": "1740 E 17th Ave", "address2": null,
         "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
         "CO", "display_address": ["1740 E 17th Ave", "Denver, CO 80218"]}, "phone":
@@ -177,7 +177,7 @@ http_interactions:
         "review_count": 898, "categories": [{"alias": "italian", "title": "Italian"},
         {"alias": "bars", "title": "Bars"}, {"alias": "salad", "title": "Salad"}],
         "rating": 4.0, "coordinates": {"latitude": 39.735020342619, "longitude": -104.95613854543},
-        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
         "2600 E 12th Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
         "80206", "country": "US", "state": "CO", "display_address": ["2600 E 12th
         Ave", "Denver, CO 80206"]}, "phone": "+13033772091", "display_phone": "(303)
@@ -187,7 +187,7 @@ http_interactions:
         "review_count": 15, "categories": [{"alias": "cafes", "title": "Cafes"}, {"alias":
         "burgers", "title": "Burgers"}, {"alias": "salad", "title": "Salad"}], "rating":
         4.0, "coordinates": {"latitude": 39.73997, "longitude": -104.956617}, "transactions":
-        ["pickup", "delivery"], "location": {"address1": "2550 E Colfax Ave", "address2":
+        ["delivery", "pickup"], "location": {"address1": "2550 E Colfax Ave", "address2":
         "", "address3": "", "city": "Denver", "zip_code": "80206", "country": "US",
         "state": "CO", "display_address": ["2550 E Colfax Ave", "Denver, CO 80206"]},
         "phone": "+13033555445", "display_phone": "(303) 355-5445", "distance": 1256.780836821541},
@@ -197,7 +197,7 @@ http_interactions:
         "review_count": 228, "categories": [{"alias": "venues", "title": "Venues &
         Event Spaces"}, {"alias": "desserts", "title": "Desserts"}, {"alias": "tacos",
         "title": "Tacos"}], "rating": 4.0, "coordinates": {"latitude": 39.7254099,
-        "longitude": -104.97786}, "transactions": ["pickup", "delivery"], "price":
+        "longitude": -104.97786}, "transactions": ["delivery", "pickup"], "price":
         "$$", "location": {"address1": "730 E 6th Ave", "address2": null, "address3":
         "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
         "display_address": ["730 E 6th Ave", "Denver, CO 80203"]}, "phone": "+17207084623",
@@ -240,7 +240,7 @@ http_interactions:
         "review_count": 103, "categories": [{"alias": "korean", "title": "Korean"},
         {"alias": "chicken_wings", "title": "Chicken Wings"}, {"alias": "sandwiches",
         "title": "Sandwiches"}], "rating": 5.0, "coordinates": {"latitude": 39.7399015,
-        "longitude": -104.9544689}, "transactions": ["pickup", "delivery"], "location":
+        "longitude": -104.9544689}, "transactions": ["delivery", "pickup"], "location":
         {"address1": "2730 E Colfax Ave", "address2": null, "address3": null, "city":
         "Denver", "zip_code": "80206", "country": "US", "state": "CO", "display_address":
         ["2730 E Colfax Ave", "Denver, CO 80206"]}, "phone": "+13033994137", "display_phone":
@@ -249,8 +249,8 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/100-de-agave-denver-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 453, "categories": [{"alias": "mexican", "title": "Mexican"},
         {"alias": "bars", "title": "Bars"}], "rating": 3.5, "coordinates": {"latitude":
-        39.7318820372198, "longitude": -104.98641371727}, "transactions": ["pickup",
-        "delivery"], "price": "$$", "location": {"address1": "975 Lincoln St", "address2":
+        39.7318820372198, "longitude": -104.98641371727}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "975 Lincoln St", "address2":
         "", "address3": "", "city": "Denver", "zip_code": "80203", "country": "US",
         "state": "CO", "display_address": ["975 Lincoln St", "Denver, CO 80203"]},
         "phone": "+13037311100", "display_phone": "(303) 731-1100", "distance": 1440.6745977785263},
@@ -271,11 +271,11 @@ http_interactions:
         "review_count": 493, "categories": [{"alias": "breweries", "title": "Breweries"},
         {"alias": "newamerican", "title": "American (New)"}, {"alias": "pizza", "title":
         "Pizza"}], "rating": 4.5, "coordinates": {"latitude": 39.7293891906738, "longitude":
-        -104.985748291016}, "transactions": ["pickup", "delivery"], "price": "$$",
+        -104.985748291016}, "transactions": ["delivery", "pickup"], "price": "$$",
         "location": {"address1": "800 Lincoln St", "address2": "", "address3": "",
         "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO", "display_address":
         ["800 Lincoln St", "Denver, CO 80203"]}, "phone": "+17205248065", "display_phone":
         "(720) 524-8065", "distance": 1491.6134415581314}], "total": 240, "region":
         {"center": {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Wed, 03 Nov 2021 22:47:16 GMT
+  recorded_at: Wed, 03 Nov 2021 22:47:47 GMT
 recorded_with: VCR 6.0.0
