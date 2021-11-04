@@ -1,4 +1,4 @@
-class Api::V1::PetsController < ApplicationController
+class Api::V1::DogsController < ApplicationController
 
   def index
     per_page = params.fetch(:per_page, 20)
@@ -7,17 +7,17 @@ class Api::V1::PetsController < ApplicationController
     else
       page = 0
     end
-    pets = Pet.exclude_user_dogs(params[:user_id]).limit(per_page).offset(page)
-    render json: PetSerializer.new(pets)
+    dogs = Dog.exclude_user_dogs(params[:user_id]).limit(per_page).offset(page)
+    render json: DogSerializer.new(dogs)
   end
 
   def create
-    pet = Pet.create!(pet_params)
+    dog = Dog.create!(dog_params)
   end
 
   private
 
-  def pet_params
+  def dog_params
     params.require(:object).permit(:name, :size, :age, :breed, :vaccinated, :sex, :trained, :user_id, :description)
   end
 end
