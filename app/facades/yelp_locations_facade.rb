@@ -3,9 +3,13 @@ class YelpLocationsFacade
     business_data = YelpService.find_locations(location)
 
     info = business_data.map do |business|
-      { name: business[:name],
-      address: business[:location][:display_address],
-      phone: business[:display_phone] }
+      {
+        id: business[:id],
+        name: business[:name],
+        address: business[:location][:display_address].join(', '),
+        phone: business[:display_phone],
+        rating: business[:rating]
+      }
     end
   end
 end
