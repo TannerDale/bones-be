@@ -7,10 +7,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - Faraday v1.8.0
       Authorization:
       - bearer <API_KEY>
+      User-Agent:
+      - Faraday v1.8.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Server:
-      - envoy
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4988'
       Ratelimit-Resettime:
-      - '2021-11-04T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-74fc997579-tqp7b; site=public_api_v3
+      - '2021-11-05T00:00:00+00:00'
+      Ratelimit-Remaining:
+      - '4949'
+      X-Zipkin-Id:
+      - b39435c219a91bdd
       X-B3-Sampled:
       - '0'
-      X-Zipkin-Id:
-      - 70d252ea351c7e6f
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--useast1-b9c656cb7-hqjjn; site=public_api_v3
+      Server:
+      - envoy
       X-Cloudmap:
-      - routing_uswest2
+      - routing_useast1
       X-Proxied:
-      - 10-69-113-185-uswest2aprod
+      - 10-65-133-10-useast1bprod
       X-Extlb:
-      - 10-69-113-185-uswest2aprod
+      - 10-65-133-10-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 03 Nov 2021 22:47:16 GMT
+      - Thu, 04 Nov 2021 18:15:10 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8244-DEN
+      - cache-ewr18144-EWR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -64,10 +64,21 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"businesses": [{"id": "RTvR4W7K-59xFFZAUTMTbQ", "alias": "lucky-noodles-denver",
+      string: '{"businesses": [{"id": "MWFGHr6NOg7pAoLgbgFdsQ", "alias": "doppio-coffee-denver",
+        "name": "Doppio Coffee", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Y3nLL8rizY1-z7_PG6ja0A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/doppio-coffee-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 97, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
+        "sandwiches", "title": "Sandwiches"}], "rating": 4.5, "coordinates": {"latitude":
+        39.7402, "longitude": -104.97129}, "transactions": ["pickup", "delivery"],
+        "price": "$", "location": {"address1": "1245 E Colfax Ave", "address2": "Ste
+        105", "address3": "", "city": "Denver", "zip_code": "80218", "country": "US",
+        "state": "CO", "display_address": ["1245 E Colfax Ave", "Ste 105", "Denver,
+        CO 80218"]}, "phone": "+13035377794", "display_phone": "(303) 537-7794", "distance":
+        539.8171882096158}, {"id": "RTvR4W7K-59xFFZAUTMTbQ", "alias": "lucky-noodles-denver",
         "name": "Lucky Noodles", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/uoXE8rVcYAV4R6njOCxrpw/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/lucky-noodles-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 113, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
+        "review_count": 114, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "noodles", "title": "Noodles"}, {"alias": "coffee", "title": "Coffee & Tea"}],
         "rating": 4.5, "coordinates": {"latitude": 39.7402, "longitude": -104.97194},
         "transactions": ["pickup", "delivery"], "location": {"address1": "1201 E Colfax
@@ -85,17 +96,6 @@ http_interactions:
         "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
         "display_address": ["1201 E Colfax Ave", "Denver, CO 80218"]}, "phone": "+13038391394",
         "display_phone": "(303) 839-1394", "distance": 541.9058239564879}, {"id":
-        "whMF9UFpUrtalDgqr_yENw", "alias": "kingas-lounge-denver", "name": "Kinga''s
-        Lounge", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/NbU1S5qAAFz2g_4tjLeqFA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/kingas-lounge-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 267, "categories": [{"alias": "lounges", "title": "Lounges"},
-        {"alias": "polish", "title": "Polish"}, {"alias": "breakfast_brunch", "title":
-        "Breakfast & Brunch"}], "rating": 3.5, "coordinates": {"latitude": 39.74019,
-        "longitude": -104.9723099}, "transactions": ["pickup", "delivery"], "price":
-        "$$", "location": {"address1": "1509 Marion St", "address2": "", "address3":
-        "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
-        "display_address": ["1509 Marion St", "Denver, CO 80218"]}, "phone": "+13038306922",
-        "display_phone": "(303) 830-6922", "distance": 547.1323479378951}, {"id":
         "-7AgflI0MNLAimyFb6T5tQ", "alias": "good-times-burgers-and-frozen-custard-denver-11",
         "name": "Good Times Burgers & Frozen Custard", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/egcncqdw79ndZ5f3nVVVyQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/good-times-burgers-and-frozen-custard-denver-11?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
@@ -139,9 +139,20 @@ http_interactions:
         "1598 E 17th Ave", "address2": null, "address3": "", "city": "Denver", "zip_code":
         "80218", "country": "US", "state": "CO", "display_address": ["1598 E 17th
         Ave", "Denver, CO 80218"]}, "phone": "+13038328000", "display_phone": "(303)
-        832-8000", "distance": 852.7251908173092}, {"id": "o-i3q1AA1QFCK9EmaQc52w",
-        "alias": "sullivan-scrap-kitchen-denver-2", "name": "Sullivan Scrap Kitchen",
-        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/eFIseqKUaLpAKdACX7FlZQ/o.jpg",
+        832-8000", "distance": 852.7251908173092}, {"id": "jsux4d-27MbCymwksz9RZg",
+        "alias": "waffle-brothers-pub-style-denver", "name": "Waffle Brothers Pub
+        Style", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/SJDAKaDYwLbOVapwr4kY5w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/waffle-brothers-pub-style-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 285, "categories": [{"alias": "breakfast_brunch", "title":
+        "Breakfast & Brunch"}, {"alias": "waffles", "title": "Waffles"}, {"alias":
+        "chickenshop", "title": "Chicken Shop"}], "rating": 4.0, "coordinates": {"latitude":
+        39.74349, "longitude": -104.971216385249}, "transactions": ["pickup", "delivery"],
+        "price": "$$", "location": {"address1": "1707 Lafayette St", "address2": "",
+        "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
+        "CO", "display_address": ["1707 Lafayette St", "Denver, CO 80218"]}, "phone":
+        "+17207085150", "display_phone": "(720) 708-5150", "distance": 889.6369720405207},
+        {"id": "o-i3q1AA1QFCK9EmaQc52w", "alias": "sullivan-scrap-kitchen-denver-2",
+        "name": "Sullivan Scrap Kitchen", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/eFIseqKUaLpAKdACX7FlZQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/sullivan-scrap-kitchen-denver-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 38, "categories": [{"alias": "tradamerican", "title": "American
         (Traditional)"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias":
@@ -151,38 +162,40 @@ http_interactions:
         "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
         "CO", "display_address": ["1740 E 17th Ave", "Denver, CO 80218"]}, "phone":
         "+17202426292", "display_phone": "(720) 242-6292", "distance": 903.3680704294974},
-        {"id": "vyPPcw3xOiDgKiQXY2Xjxg", "alias": "x-bar-denver", "name": "X BAR",
-        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/k5cA82za3C7IxQwHwuJTYg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/x-bar-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 113, "categories": [{"alias": "gaybars", "title": "Gay Bars"}],
-        "rating": 3.5, "coordinates": {"latitude": 39.74014, "longitude": -104.97902},
-        "transactions": [], "price": "$$", "location": {"address1": "629 E Colfax
-        Ave", "address2": "", "address3": "", "city": "Denver", "zip_code": "80203",
-        "country": "US", "state": "CO", "display_address": ["629 E Colfax Ave", "Denver,
-        CO 80203"]}, "phone": "+13038322687", "display_phone": "(303) 832-2687", "distance":
-        914.0375879607766}, {"id": "ZntgdCiWJjAfP2N3Jht7MQ", "alias": "stoneys-uptown-denver",
-        "name": "Stoney''s Uptown", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/kjxdA2hU3uSQsrJpzLVMDw/o.jpg",
+        {"id": "43eXot0v07sAtP-CLtSRfA", "alias": "subculture-denver-2", "name": "SubCulture",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/U1aB7BWXI55kxV8WXGN-Yg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/subculture-denver-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 323, "categories": [{"alias": "sandwiches", "title": "Sandwiches"},
+        {"alias": "delis", "title": "Delis"}, {"alias": "salad", "title": "Salad"}],
+        "rating": 4.0, "coordinates": {"latitude": 39.737075, "longitude": -104.980855},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "1300 Pennsylvania St", "address2": "Ste 102", "address3": "", "city": "Denver",
+        "zip_code": "80203", "country": "US", "state": "CO", "display_address": ["1300
+        Pennsylvania St", "Ste 102", "Denver, CO 80203"]}, "phone": "+13034203232",
+        "display_phone": "(303) 420-3232", "distance": 923.4542143027655}, {"id":
+        "ZntgdCiWJjAfP2N3Jht7MQ", "alias": "stoneys-uptown-denver", "name": "Stoney''s
+        Uptown", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/kjxdA2hU3uSQsrJpzLVMDw/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/stoneys-uptown-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 152, "categories": [{"alias": "sportsbars", "title": "Sports
         Bars"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
         "tradamerican", "title": "American (Traditional)"}], "rating": 4.0, "coordinates":
         {"latitude": 39.74348117433856, "longitude": -104.97365978220878}, "transactions":
-        ["delivery", "pickup"], "price": "$$", "location": {"address1": "1035 E 17th
+        ["pickup", "delivery"], "price": "$$", "location": {"address1": "1035 E 17th
         Ave", "address2": null, "address3": "", "city": "Denver", "zip_code": "80218",
         "country": "US", "state": "CO", "display_address": ["1035 E 17th Ave", "Denver,
         CO 80218"]}, "phone": "+17204855503", "display_phone": "(720) 485-5503", "distance":
-        931.6953910725164}, {"id": "7UWt_282vPsGQPtrquRR9Q", "alias": "shells-and-sauce-denver",
-        "name": "Shells & Sauce", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yRY-S3uHuPXNAQj9VvMroQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/shells-and-sauce-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 898, "categories": [{"alias": "italian", "title": "Italian"},
-        {"alias": "bars", "title": "Bars"}, {"alias": "salad", "title": "Salad"}],
-        "rating": 4.0, "coordinates": {"latitude": 39.735020342619, "longitude": -104.95613854543},
-        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
-        "2600 E 12th Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
-        "80206", "country": "US", "state": "CO", "display_address": ["2600 E 12th
-        Ave", "Denver, CO 80206"]}, "phone": "+13033772091", "display_phone": "(303)
-        377-2091", "distance": 1207.5670962222423}, {"id": "yRRxEBnEK23ABYF-3A2h3Q",
-        "alias": "route-40-cafe-denver-3", "name": "Route 40 Cafe", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ygWNZsIlEY0tdCl4Q0FqLg/o.jpg",
+        931.6953910725164}, {"id": "kRiwvntcXKDPdtpYKcGPhg", "alias": "onefold-denver",
+        "name": "Onefold", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/s4ncc00yizhXGRQvhiMbhA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/onefold-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 792, "categories": [{"alias": "breakfast_brunch", "title":
+        "Breakfast & Brunch"}, {"alias": "cafes", "title": "Cafes"}], "rating": 4.5,
+        "coordinates": {"latitude": 39.744667, "longitude": -104.969325}, "transactions":
+        ["pickup", "delivery"], "price": "$$", "location": {"address1": "1420 E 18th
+        Ave", "address2": null, "address3": "", "city": "Denver", "zip_code": "80218",
+        "country": "US", "state": "CO", "display_address": ["1420 E 18th Ave", "Denver,
+        CO 80218"]}, "phone": "+13039540877", "display_phone": "(303) 954-0877", "distance":
+        1019.671672484495}, {"id": "yRRxEBnEK23ABYF-3A2h3Q", "alias": "route-40-cafe-denver-3",
+        "name": "Route 40 Cafe", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ygWNZsIlEY0tdCl4Q0FqLg/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/route-40-cafe-denver-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 15, "categories": [{"alias": "cafes", "title": "Cafes"}, {"alias":
         "burgers", "title": "Burgers"}, {"alias": "salad", "title": "Salad"}], "rating":
@@ -218,7 +231,7 @@ http_interactions:
         "review_count": 458, "categories": [{"alias": "tradamerican", "title": "American
         (Traditional)"}, {"alias": "sportsbars", "title": "Sports Bars"}, {"alias":
         "musicvenues", "title": "Music Venues"}], "rating": 3.5, "coordinates": {"latitude":
-        39.7342314, "longitude": -104.986504}, "transactions": ["delivery", "pickup"],
+        39.7342314, "longitude": -104.986504}, "transactions": ["pickup", "delivery"],
         "price": "$$", "location": {"address1": "1111 Lincoln St", "address2": "",
         "address3": "", "city": "Denver", "zip_code": "80203", "country": "US", "state":
         "CO", "display_address": ["1111 Lincoln St", "Denver, CO 80203"]}, "phone":
@@ -254,19 +267,8 @@ http_interactions:
         "", "address3": "", "city": "Denver", "zip_code": "80203", "country": "US",
         "state": "CO", "display_address": ["975 Lincoln St", "Denver, CO 80203"]},
         "phone": "+13037311100", "display_phone": "(303) 731-1100", "distance": 1440.6745977785263},
-        {"id": "YB-th2or0P4qyeF15SVrog", "alias": "vesper-lounge-denver", "name":
-        "Vesper Lounge", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/3zjyoEBbVjGMNLS2RX65Pg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/vesper-lounge-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 157, "categories": [{"alias": "tradamerican", "title": "American
-        (Traditional)"}, {"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias":
-        "lounges", "title": "Lounges"}], "rating": 4.0, "coordinates": {"latitude":
-        39.727429, "longitude": -104.983912}, "transactions": ["delivery"], "price":
-        "$$", "location": {"address1": "233 E 7th Ave", "address2": "", "address3":
-        "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
-        "display_address": ["233 E 7th Ave", "Denver, CO 80203"]}, "phone": "+17203280314",
-        "display_phone": "(720) 328-0314", "distance": 1475.1617370380188}, {"id":
-        "3asUEG-iok2bunLBp1O_mw", "alias": "lowdown-brewery-kitchen-denver", "name":
-        "Lowdown Brewery + Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/4BVCLbTZXqdo_rDVwc5Ezg/o.jpg",
+        {"id": "3asUEG-iok2bunLBp1O_mw", "alias": "lowdown-brewery-kitchen-denver",
+        "name": "Lowdown Brewery + Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/4BVCLbTZXqdo_rDVwc5Ezg/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/lowdown-brewery-kitchen-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 493, "categories": [{"alias": "breweries", "title": "Breweries"},
         {"alias": "newamerican", "title": "American (New)"}, {"alias": "pizza", "title":
@@ -277,5 +279,5 @@ http_interactions:
         ["800 Lincoln St", "Denver, CO 80203"]}, "phone": "+17205248065", "display_phone":
         "(720) 524-8065", "distance": 1491.6134415581314}], "total": 240, "region":
         {"center": {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Wed, 03 Nov 2021 22:47:16 GMT
+  recorded_at: Thu, 04 Nov 2021 18:15:10 GMT
 recorded_with: VCR 6.0.0
