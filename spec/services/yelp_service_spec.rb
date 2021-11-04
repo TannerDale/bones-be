@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe YelpService, :vcr do
+  let(:location) { 'Denver' }
+  let(:id) { 'RTvR4W7K-59xFFZAUTMTbQ' }
+
   it '#find_locations' do
-    location = 'Denver'
     results = YelpService.find_locations(location)
     expect(results.size).to eq(20)
     expect(results).to be_a(Array)
@@ -12,5 +14,11 @@ RSpec.describe YelpService, :vcr do
     expect(business[:location][:city]).to eq(location)
   end
 
-  it 'can find locations with partial location data'
+  it '#find_location_by_id' do
+    results = YelpService.find_location_by_id(id)
+    expect(results).to be_a Hash
+    expect(results).to_not be_empty
+    expect(results).to have_key(:id)
+    expect(results[:id]).to eq(id)
+  end
 end
