@@ -5,7 +5,7 @@ class YelpClient
     end
 
     def request(location)
-      test = Faraday.get do |req|
+      Faraday.get do |req|
         req.headers['Authorization'] = "bearer #{ENV['yelp_api_key']}"
         req.url "https://api.yelp.com/v3/businesses/search?term=dog+friendly&categories=restaurants,bars&open_now=true&sort_by=distance&location=#{location}"
       end

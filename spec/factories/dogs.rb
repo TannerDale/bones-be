@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :pet, class: Pet do
+  factory :dog, class: Dog do
     name { Faker::Creature::Dog.name }
     breed { Faker::Creature::Dog.breed }
     description { Faker::Emotion.adjective }
