@@ -10,13 +10,15 @@ RSpec.describe 'yelp facade', :vcr do
 
     first_result = results.first
 
-    expect(first_result.count).to eq(3)
+    expect(first_result.count).to eq(5)
 
     expect(first_result).to have_key(:name)
     expect(first_result).to have_key(:address)
     expect(first_result).to have_key(:phone)
+    expect(first_result).to have_key(:id)
+    expect(first_result).to have_key(:rating)
 
-    expect(first_result).not_to have_key(:id)
-    expect(first_result).not_to have_key(:rating)
+    expect(first_result).not_to have_key(:location)
+    expect(first_result).not_to have_key(:url)
   end
 end
