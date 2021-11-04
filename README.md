@@ -130,10 +130,9 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 - [Tanner Dale](https://github.com/TannerDale)
 
 
-
 <!-- Markdown link & img dfn's -->
-[travis-image]: https://api.travis-ci.com/
-[travis-url]: https://app.travis-ci.com/github/
+[travis-image]: https://app.travis-ci.com/TannerDale/bones-be.svg?branch=main
+[travis-url]: https://app.travis-ci.com/TannerDale/bones-be
 [Github-img]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 
 <!-- #### Development -->
