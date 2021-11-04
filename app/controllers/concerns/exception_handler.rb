@@ -6,8 +6,8 @@ module ExceptionHandler
       render json: {
         message: 'Invalid Request',
         error: { details: e.message }
-        }, status: 400
-      end
+      }, status: 400
+    end
 
     rescue_from ActiveRecord::RecordNotFound do |e|
       render json: {

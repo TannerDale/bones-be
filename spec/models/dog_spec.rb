@@ -12,9 +12,9 @@ RSpec.describe Dog, type: :model do
   end
 
   describe 'enums' do
-    it { should define_enum_for(:size).with_values([:small, :medium, :large]) }
-    it { should define_enum_for(:vaccinated).with_values([:false, :true]) }
-    it { should define_enum_for(:trained).with_values([:no, :yes]) }
+    it { should define_enum_for(:size).with_values(%i[small medium large]) }
+    it { should define_enum_for(:vaccinated).with_values(%i[false true]) }
+    it { should define_enum_for(:trained).with_values(%i[no yes]) }
   end
 
   describe 'class methods/scopes' do

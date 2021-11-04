@@ -7,11 +7,9 @@ class YelpService
     def find_location_by_id(id)
       data = YelpClient.location_by_id(id)
 
-      if data.key?(:error)
-        raise ActiveRecord::RecordNotFound
-      else
-        data
-      end
+      raise ActiveRecord::RecordNotFound if data.key?(:error)
+
+      data
     end
   end
 end

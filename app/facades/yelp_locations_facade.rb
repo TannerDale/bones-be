@@ -17,7 +17,6 @@ class YelpLocationsFacade
     end
 
     def format_business_data(business)
-
       {
         id: business[:id],
         name: business[:name],
