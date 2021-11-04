@@ -25,35 +25,35 @@ http_interactions:
       Content-Type:
       - application/json
       X-Routing-Service:
-      - routing-main--useast1-b9c656cb7-brhrv; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
-      X-Zipkin-Id:
-      - d6f75b8fd84d0c03
+      - routing-main--useast1-b9c656cb7-24cgv; site=public_api_v3
+      Server:
+      - envoy
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4948'
-      Server:
-      - envoy
+      - '4937'
+      X-Zipkin-Id:
+      - 4cda48128eb697f1
+      X-B3-Sampled:
+      - '0'
       Ratelimit-Resettime:
       - '2021-11-05T00:00:00+00:00'
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
-      - 10-65-190-140-useast1bprod
+      - 10-65-85-173-useast1aprod
       X-Extlb:
-      - 10-65-190-140-useast1bprod
+      - 10-65-85-173-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Thu, 04 Nov 2021 18:15:11 GMT
+      - Thu, 04 Nov 2021 20:18:06 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-ewr18153-EWR
+      - cache-dal21233-DAL
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -83,8 +83,8 @@ http_interactions:
         "start": "1100", "end": "1400", "day": 4}, {"is_overnight": false, "start":
         "1530", "end": "2000", "day": 4}, {"is_overnight": false, "start": "1200",
         "end": "2000", "day": 5}, {"is_overnight": false, "start": "1200", "end":
-        "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
+        "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         ["pickup", "delivery"], "messaging": {"url": "https://www.yelp.com/raq/RTvR4W7K-59xFFZAUTMTbQ?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=OBMoK3r2ftITcAO2w2E5Ew#popup%3Araq",
         "use_case_text": "Message the Business"}}'
-  recorded_at: Thu, 04 Nov 2021 18:15:11 GMT
+  recorded_at: Thu, 04 Nov 2021 20:18:06 GMT
 recorded_with: VCR 6.0.0

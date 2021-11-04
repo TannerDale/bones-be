@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Ratelimit-Remaining:
+      - '4941'
+      X-Zipkin-Id:
+      - 180e447f764b6fc8
+      Ratelimit-Resettime:
+      - '2021-11-05T00:00:00+00:00'
       Server:
       - envoy
       X-B3-Sampled:
       - '0'
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Zipkin-Id:
-      - fb2b9e5e6a990cc8
-      Ratelimit-Remaining:
-      - '4950'
-      Ratelimit-Resettime:
-      - '2021-11-05T00:00:00+00:00'
       X-Routing-Service:
       - routing-main--useast1-b9c656cb7-vtvgq; site=public_api_v3
+      Ratelimit-Dailylimit:
+      - '5000'
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
-      - 10-65-85-173-useast1aprod
+      - 10-65-190-140-useast1bprod
       X-Extlb:
-      - 10-65-85-173-useast1aprod
+      - 10-65-190-140-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Thu, 04 Nov 2021 18:15:09 GMT
+      - Thu, 04 Nov 2021 20:18:04 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-ewr18164-EWR
+      - cache-dal21220-DAL
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -75,18 +75,8 @@ http_interactions:
         105", "address3": "", "city": "Denver", "zip_code": "80218", "country": "US",
         "state": "CO", "display_address": ["1245 E Colfax Ave", "Ste 105", "Denver,
         CO 80218"]}, "phone": "+13035377794", "display_phone": "(303) 537-7794", "distance":
-        539.8171882096158}, {"id": "RTvR4W7K-59xFFZAUTMTbQ", "alias": "lucky-noodles-denver",
-        "name": "Lucky Noodles", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/uoXE8rVcYAV4R6njOCxrpw/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/lucky-noodles-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 114, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
-        "noodles", "title": "Noodles"}, {"alias": "coffee", "title": "Coffee & Tea"}],
-        "rating": 4.5, "coordinates": {"latitude": 39.7402, "longitude": -104.97194},
-        "transactions": ["pickup", "delivery"], "location": {"address1": "1201 E Colfax
-        Ave", "address2": "Ste 102", "address3": "", "city": "Denver", "zip_code":
-        "80218", "country": "US", "state": "CO", "display_address": ["1201 E Colfax
-        Ave", "Ste 102", "Denver, CO 80218"]}, "phone": "+17209171000", "display_phone":
-        "(720) 917-1000", "distance": 541.9058239564879}, {"id": "FfwLdr5-TBINeZbR4ey_WQ",
-        "alias": "irish-snug-denver", "name": "Irish Snug", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/4Tfw-AgjlGw6ZM9LDSLU0g/o.jpg",
+        539.8171882096158}, {"id": "FfwLdr5-TBINeZbR4ey_WQ", "alias": "irish-snug-denver",
+        "name": "Irish Snug", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/4Tfw-AgjlGw6ZM9LDSLU0g/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/irish-snug-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 493, "categories": [{"alias": "venues", "title": "Venues &
         Event Spaces"}, {"alias": "irish_pubs", "title": "Irish Pub"}, {"alias": "burgers",
@@ -277,7 +267,18 @@ http_interactions:
         "location": {"address1": "800 Lincoln St", "address2": "", "address3": "",
         "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO", "display_address":
         ["800 Lincoln St", "Denver, CO 80203"]}, "phone": "+17205248065", "display_phone":
-        "(720) 524-8065", "distance": 1491.6134415581314}], "total": 240, "region":
-        {"center": {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Thu, 04 Nov 2021 18:15:09 GMT
+        "(720) 524-8065", "distance": 1491.6134415581314}, {"id": "7IOQ3CX1OXc6TjC59WbUNw",
+        "alias": "burgerfi-denver", "name": "BurgerFi", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/3mR9kLD5K_ebJAho2ere6w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/burgerfi-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 320, "categories": [{"alias": "hotdog", "title": "Hot Dogs"},
+        {"alias": "burgers", "title": "Burgers"}, {"alias": "tradamerican", "title":
+        "American (Traditional)"}], "rating": 3.5, "coordinates": {"latitude": 39.734932,
+        "longitude": -104.98783}, "transactions": ["pickup", "delivery"], "price":
+        "$$", "location": {"address1": "1147 Broadway", "address2": "Unit 101", "address3":
+        "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
+        "display_address": ["1147 Broadway", "Unit 101", "Denver, CO 80203"]}, "phone":
+        "+17203905046", "display_phone": "(720) 390-5046", "distance": 1505.0956922021933}],
+        "total": 240, "region": {"center": {"longitude": -104.97024536132812, "latitude":
+        39.73552421220229}}}'
+  recorded_at: Thu, 04 Nov 2021 20:18:04 GMT
 recorded_with: VCR 6.0.0
