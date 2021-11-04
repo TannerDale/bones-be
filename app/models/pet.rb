@@ -5,7 +5,7 @@ class Pet < ApplicationRecord
   enum vaccinated: %w[false true]
   enum trained: %w[no yes]
 
-  def self.find_owner_dogs(id)
+  def self.find_user_dogs(id)
     where(user_id: id)
   end
 
