@@ -13,7 +13,7 @@ class YelpClient
     end
 
     def conn
-      Faraday.new("https://api.yelp.com", headers: { 'Authorization' => "bearer #{ENV['yelp_api_key']}" })
+      Faraday.new('https://api.yelp.com', headers: { 'Authorization' => "bearer #{ENV['yelp_api_key']}" })
     end
 
     def parse_data(response)
