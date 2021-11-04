@@ -32,7 +32,7 @@ Required:
 
 [Bones](https://backend.turing.io/module3/projects/viewing_party) is a web application formed from Turing's Module 3 [Consultancy Group Project](https://backend.turing.edu/module3/projects/consultancy/) that addresses the lack of ability for pet owners to meet, connect, and build relationships with others through their shared passion for their dogs and dogs in general.
 
-[Wireframes](https://backend.turing.io/module3/projects/viewing_party/wireframes)
+[Wireframes](https://miro.com/app/board/o9J_lmB3-wU=/)
 
 ### <ins>Project Learning Goals</ins>
 <b>Explicit Technical Expectations:</b> Below are technical goals that are being applied in this project (ordered by priority).
