@@ -1,11 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'yelp_locations#index', :vcr do
-
   let(:locations) { JSON.parse(response.body, symbolize_names: true) }
 
-  it "can get all businesses from searched location" do
-
+  it 'can get all businesses from searched location' do
     get '/api/v1/yelp_locations?location=denver'
 
     expect(response).to be_successful
