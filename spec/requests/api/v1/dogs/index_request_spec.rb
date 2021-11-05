@@ -41,7 +41,7 @@ RSpec.describe 'dog#index' do
     expect(results).not_to include(3)
   end
 
-  it 'gets items' do
+  it 'gets dogs' do
     create_list(:dog, 25)
 
     get '/api/v1/dogs?page=1'
