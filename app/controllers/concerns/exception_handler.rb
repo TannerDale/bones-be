@@ -20,7 +20,7 @@ module ExceptionHandler
       render json: {
         message: 'Invalid Record',
         error: { details: e.message }
-      }, status: :not_found
+      }, status: 400
     end
 
     rescue_from ActionController::ParameterMissing do |e|

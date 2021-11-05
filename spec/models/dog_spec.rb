@@ -35,22 +35,4 @@ RSpec.describe Dog, type: :model do
       expect(Dog.exclude_user_dogs(4).first.trained).to eq('no')
     end
   end
-
-  describe 'instance methods' do
-    let(:dogs) { create_list :dog, 4 }
-    let(:dog) { dogs.first }
-
-    before :each do
-      dogs[1..2].each do |d|
-        PlayDate.create(creator_dog: dog, invited_dog: d, location_id: 'adsf')
-      end
-      PlayDate.create(creator_dog: dogs.last, invited_dog: dog, location_id: 'adsf')
-    end
-
-    it 'has combined invited and created play dates' do
-      result = dog.play_dates
-
-      expect(result.size).to eq(3)
-    end
-  end
 end
