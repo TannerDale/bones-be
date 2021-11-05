@@ -1,7 +1,7 @@
 class Api::V1::PlayDatesController < ApplicationController
   def index
-    dog = Dog.find(params[:id])
-
+    dog = Dog.find(params[:dog_id])
+    render json: DogWithPlaydatesSerializer.new(dog)
   end
 
   def create
