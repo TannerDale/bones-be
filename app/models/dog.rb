@@ -14,8 +14,4 @@ class Dog < ApplicationRecord
   def self.exclude_user_dogs(id)
     where.not(user_id: id)
   end
-
-  def play_dates
-    created_play_dates + invited_play_dates
-  end
 end
