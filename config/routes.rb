@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
       resources :dogs, only: %i[create index]
 
+      resources :play_dates, only: :create
+
       resources :yelp_locations, only: :index
       get '/yelp_location', controller: :yelp_locations, action: :show
     end
