@@ -22,7 +22,10 @@ gem 'faraday'
 gem 'figaro'
 gem 'jsonapi-serializer'
 gem 'travis'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1908caf6fccd8fac0c65c57cbe0b171ebc320f56
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
@@ -52,4 +55,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

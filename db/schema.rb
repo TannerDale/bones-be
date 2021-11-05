@@ -10,37 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_04_184254) do
-
+ActiveRecord::Schema.define(version: 20_211_104_230_015) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "dogs", force: :cascade do |t|
-    t.string "name"
-    t.integer "size"
-    t.string "breed"
-    t.integer "age"
-    t.string "sex"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "vaccinated"
-    t.integer "trained"
+  create_table 'dogs', force: :cascade do |t|
+    t.string 'name'
+    t.integer 'size'
+    t.string 'breed'
+    t.integer 'age'
+    t.string 'sex'
+    t.string 'description'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.integer 'user_id'
+    t.integer 'vaccinated'
+    t.integer 'trained'
   end
 
-  create_table "play_dates", force: :cascade do |t|
-    t.bigint "creator_dog_id"
-    t.bigint "invited_dog_id"
-    t.string "location_id"
-    t.date "date"
-    t.time "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["creator_dog_id"], name: "index_play_dates_on_creator_dog_id"
-    t.index ["invited_dog_id"], name: "index_play_dates_on_invited_dog_id"
+  create_table 'play_dates', force: :cascade do |t|
+    t.bigint 'creator_dog_id'
+    t.bigint 'invited_dog_id'
+    t.string 'location_id'
+    t.date 'date'
+    t.time 'time'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['creator_dog_id'], name: 'index_play_dates_on_creator_dog_id'
+    t.index ['invited_dog_id'], name: 'index_play_dates_on_invited_dog_id'
   end
 
-  add_foreign_key "play_dates", "dogs", column: "creator_dog_id"
-  add_foreign_key "play_dates", "dogs", column: "invited_dog_id"
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.string 'google_id'
+    t.string 'token'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
+  add_foreign_key 'play_dates', 'dogs', column: 'creator_dog_id'
+  add_foreign_key 'play_dates', 'dogs', column: 'invited_dog_id'
 end
