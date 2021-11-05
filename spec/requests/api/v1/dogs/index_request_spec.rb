@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'dog#index' do
-  it "can get all dogs from a user id" do
+  it 'can get all dogs from a user id' do
     create_list(:dog, 5, user_id: 2)
     create_list(:dog, 5, user_id: 3)
 

@@ -1,0 +1,266 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=restaurants,bars&location=1&open_now=true&sort_by=distance&term=dog%20friendly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer <API_KEY>
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--useast1-b9c656cb7-xs5r8; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4998'
+      X-Zipkin-Id:
+      - a5ce22b4e17f4555
+      Ratelimit-Resettime:
+      - '2021-11-06T00:00:00+00:00'
+      Server:
+      - envoy
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-85-173-useast1aprod
+      X-Extlb:
+      - 10-65-85-173-useast1aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 05 Nov 2021 21:31:56 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-ewr18157-EWR
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "6njO6IrPy3XygVJFOJcAug", "alias": "restaurant-post-kirchschlag-in-der-buckligen-welt",
+        "name": "Restaurant Post", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/dh9rqr5D-QW6gulzI_s08Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/restaurant-post-kirchschlag-in-der-buckligen-welt?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 2, "categories": [{"alias": "austrian", "title": "Austrian"},
+        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}], "rating": 4.5,
+        "coordinates": {"latitude": 47.5017573669368, "longitude": 16.296683549881},
+        "transactions": [], "location": {"address1": "G\u00fcnser Str. 2", "address2":
+        "", "address3": "", "city": "Kirchschlag in der Buckligen Welt", "zip_code":
+        "2860", "country": "AT", "state": "3", "display_address": ["G\u00fcnser Str.
+        2", "2860 Kirchschlag in der Buckligen Welt", "Austria"]}, "phone": "+4326462216",
+        "display_phone": "+43 2646 2216", "distance": 22166.945932468203}, {"id":
+        "rC5KV5D0XlJC7O6MnLaJ5g", "alias": "wirtshaus-und-achterlbar-xaver-wiener-neustadt",
+        "name": "Wirtshaus und Achterlbar Xaver", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/qQ2V-zJk6u53KVPKn3yuyw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/wirtshaus-und-achterlbar-xaver-wiener-neustadt?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 1, "categories": [{"alias": "austrian", "title": "Austrian"},
+        {"alias": "wine_bars", "title": "Wine Bars"}], "rating": 4.0, "coordinates":
+        {"latitude": 47.81247, "longitude": 16.24107}, "transactions": [], "location":
+        {"address1": "Lange Gasse 20", "address2": null, "address3": "", "city": "Wiener
+        Neustadt", "zip_code": "2700", "country": "AT", "state": "3", "display_address":
+        ["Lange Gasse 20", "2700 Wiener Neustadt", "Austria"]}, "phone": "+43262227692",
+        "display_phone": "+43 2622 27692", "distance": 25253.866052781177}, {"id":
+        "hVojPMQy-OXkDpeM3F-aOQ", "alias": "comodo-kottingbrunn", "name": "Comodo",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/7CW461-9AkjvlEPYO8Lf-Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/comodo-kottingbrunn?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 1, "categories": [{"alias": "cocktailbars", "title": "Cocktail
+        Bars"}, {"alias": "cafes", "title": "Cafes"}], "rating": 5.0, "coordinates":
+        {"latitude": 47.95211, "longitude": 16.22139}, "transactions": [], "price":
+        "\u20ac\u20ac\u20ac", "location": {"address1": "Badner Str. 9", "address2":
+        "", "address3": "", "city": "Kottingbrunn", "zip_code": "2542", "country":
+        "AT", "state": "3", "display_address": ["Badner Str. 9", "2542 Kottingbrunn",
+        "Austria"]}, "phone": "+43225220266", "display_phone": "+43 2252 20266", "distance":
+        38125.95522632008}, {"id": "lYdlj43gA35kyy-N1qLwpw", "alias": "das-fritz-gemeinde-weiden-am-see",
+        "name": "Das Fritz", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/IjD7hxWnSBEh0OR45cpkYw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/das-fritz-gemeinde-weiden-am-see?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 3, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
+        "seafood", "title": "Seafood"}, {"alias": "austrian", "title": "Austrian"}],
+        "rating": 3.5, "coordinates": {"latitude": 47.9203199, "longitude": 16.8503},
+        "transactions": [], "location": {"address1": "Seebad 1", "address2": "", "address3":
+        null, "city": "Gemeinde Weiden am See", "zip_code": "7121", "country": "AT",
+        "state": "1", "display_address": ["Seebad 1", "7121 Gemeinde Weiden am See",
+        "Austria"]}, "phone": "+43216740222", "display_phone": "+43 2167 40222", "distance":
+        40144.302869055304}, {"id": "X60hWKfvmATup3iZUdpJfg", "alias": "steakhouse-parndorf",
+        "name": "Steakhouse", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/9KJrbQ4SkDRL7zYhmXW3PA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/steakhouse-parndorf?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 5, "categories": [{"alias": "steak", "title": "Steakhouses"}],
+        "rating": 3.0, "coordinates": {"latitude": 47.99781, "longitude": 16.85953},
+        "transactions": [], "price": "\u20ac\u20ac\u20ac", "location": {"address1":
+        "Hauptstr. 66", "address2": null, "address3": null, "city": "Parndorf", "zip_code":
+        "7111", "country": "AT", "state": "1", "display_address": ["Hauptstr. 66",
+        "7111 Parndorf", "Austria"]}, "phone": "+4321662742", "display_phone": "+43
+        2166 2742", "distance": 47232.649992314364}, {"id": "KLS_g_DrTShq-O2DxdAgvA",
+        "alias": "pizza-plus-wien-2", "name": "Pizza Plus", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/4pmOwb8epMkQotwQA7_0gg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pizza-plus-wien-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 4, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "pizza", "title": "Pizza"}, {"alias": "austrian", "title": "Austrian"}],
+        "rating": 4.5, "coordinates": {"latitude": 48.1513603545102, "longitude":
+        16.315339890816}, "transactions": [], "price": "\u20ac\u20ac", "location":
+        {"address1": "Anton Baumgartner Str. 44", "address2": "", "address3": "Kaufpark
+        Alt Erlaa", "city": "Vienna", "zip_code": "1230", "country": "AT", "state":
+        "9", "display_address": ["Anton Baumgartner Str. 44", "Kaufpark Alt Erlaa",
+        "1230 Vienna", "Austria"]}, "phone": "+4316679229", "display_phone": "+43
+        1 6679229", "distance": 56579.43562234371}, {"id": "W59Jefhk57QZMm2TAJ1x6A",
+        "alias": "lokal-caf\u00e9-bar-pergola-wien-2", "name": "Lokal-Caf\u00e9-Bar
+        Pergola", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/vKgmJLnE7RHUaUr-CwjTFA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lokal-caf%C3%A9-bar-pergola-wien-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 6, "categories": [{"alias": "austrian", "title": "Austrian"},
+        {"alias": "cocktailbars", "title": "Cocktail Bars"}], "rating": 4.5, "coordinates":
+        {"latitude": 48.1831421, "longitude": 16.3775682}, "transactions": [], "price":
+        "\u20ac\u20ac\u20ac", "location": {"address1": "Hotel Zeitgeist Vienna", "address2":
+        "Sonnwendgasse 15", "address3": "", "city": "Vienna", "zip_code": "1100",
+        "country": "AT", "state": "9", "display_address": ["Hotel Zeitgeist Vienna",
+        "Sonnwendgasse 15", "1100 Vienna", "Austria"]}, "phone": "+43190265800", "display_phone":
+        "+43 1 90265800", "distance": 59225.54009302747}, {"id": "vj1N-b9d4bFzka32S41NXA",
+        "alias": "chutney-wien-2", "name": "Chutney", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/bq3MqTdwMwmID7f-3tmNsw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/chutney-wien-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 10, "categories": [{"alias": "indpak", "title": "Indian"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 3.5, "coordinates":
+        {"latitude": 48.1847945548134, "longitude": 16.3761882483959}, "transactions":
+        [], "price": "\u20ac", "location": {"address1": "Hauptbahnhof Wien", "address2":
+        "Ebene 0 / 12", "address3": "", "city": "Vienna", "zip_code": "1100", "country":
+        "AT", "state": "9", "display_address": ["Hauptbahnhof Wien", "Ebene 0 / 12",
+        "1100 Vienna", "Austria"]}, "phone": "+431600589751315", "display_phone":
+        "+43 1 600589751315", "distance": 59421.52902325856}, {"id": "ICo_iE1gzhepJNi3nVmzQw",
+        "alias": "twentyone-wien-2", "name": "Twentyone", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Ix-YQYle9pJYljmRfauafA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/twentyone-wien-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 1, "categories": [{"alias": "wine_bars", "title": "Wine Bars"},
+        {"alias": "cafes", "title": "Cafes"}, {"alias": "austrian", "title": "Austrian"}],
+        "rating": 4.0, "coordinates": {"latitude": 48.1859573413961, "longitude":
+        16.383288881662}, "transactions": [], "price": "\u20ac\u20ac", "location":
+        {"address1": "Arsenalstr. 1", "address2": "", "address3": null, "city": "Vienna",
+        "zip_code": "1030", "country": "AT", "state": "9", "display_address": ["Arsenalstr.
+        1", "1030 Vienna", "Austria"]}, "phone": "+4317988888", "display_phone": "+43
+        1 7988888", "distance": 59479.88047535406}, {"id": "rnQaCWebzAFDgiYVS33xNA",
+        "alias": "l-osteria-wien-4", "name": "L''Osteria", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xz0nwq2BdIVVPCHOev1kpw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/l-osteria-wien-4?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 18, "categories": [{"alias": "pizza", "title": "Pizza"}, {"alias":
+        "italian", "title": "Italian"}], "rating": 3.5, "coordinates": {"latitude":
+        48.185427, "longitude": 16.375057}, "transactions": [], "price": "\u20ac\u20ac",
+        "location": {"address1": "Am Hauptbahnhof 1", "address2": "", "address3":
+        "BahnhofCity Wien Hauptbahnhof, EG 152", "city": "Vienna", "zip_code": "1100",
+        "country": "AT", "state": "9", "display_address": ["Am Hauptbahnhof 1", "BahnhofCity
+        Wien Hauptbahnhof, EG 152", "1100 Vienna", "Austria"]}, "phone": "+431600587110",
+        "display_phone": "+43 1 600587110", "distance": 59502.736394462976}, {"id":
+        "T9LISsv0O-50U-HqHRMoOQ", "alias": "marx-wien", "name": "Marx", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/zeKznVC4Un0SaYTv5jdD7A/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/marx-wien?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 8, "categories": [{"alias": "lounges", "title": "Lounges"},
+        {"alias": "austrian", "title": "Austrian"}], "rating": 4.0, "coordinates":
+        {"latitude": 48.18906, "longitude": 16.41569}, "transactions": [], "price":
+        "\u20ac\u20ac", "location": {"address1": "Franzosengraben 3", "address2":
+        "", "address3": "", "city": "Vienna", "zip_code": "1030", "country": "AT",
+        "state": "9", "display_address": ["Franzosengraben 3", "1030 Vienna", "Austria"]},
+        "phone": "+4317969944", "display_phone": "+43 1 7969944", "distance": 59546.06045345494},
+        {"id": "TUqIzr4oA-IJmpPP943HgQ", "alias": "das-lokal-im-hof-wien", "name":
+        "Das Lokal im Hof", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/BYHgKg2t4kWj5cIOXl5B1w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/das-lokal-im-hof-wien?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 2, "categories": [{"alias": "austrian", "title": "Austrian"}],
+        "rating": 5.0, "coordinates": {"latitude": 48.188735, "longitude": 16.37441},
+        "transactions": [], "location": {"address1": "Viktorgasse 22", "address2":
+        "", "address3": "", "city": "Vienna", "zip_code": "1040", "country": "AT",
+        "state": "9", "display_address": ["Viktorgasse 22", "1040 Vienna", "Austria"]},
+        "phone": "+4319719141", "display_phone": "+43 1 9719141", "distance": 59873.66738620236},
+        {"id": "IczId_Eh0NY17VkLOQ1_iA", "alias": "connollys-wien", "name": "Connolly''s",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/DU7UtezBuVAo55ziVweK2A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/connollys-wien?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 5, "categories": [{"alias": "sandwiches", "title": "Sandwiches"},
+        {"alias": "bars", "title": "Bars"}], "rating": 5.0, "coordinates": {"latitude":
+        48.18369, "longitude": 16.32113}, "transactions": [], "price": "\u20ac\u20ac",
+        "location": {"address1": "Sch\u00f6nbrunner Str. 268", "address2": "", "address3":
+        "", "city": "Vienna", "zip_code": "1120", "country": "AT", "state": "9", "display_address":
+        ["Sch\u00f6nbrunner Str. 268", "1120 Vienna", "Austria"]}, "phone": "+4318907355",
+        "display_phone": "+43 1 8907355", "distance": 60009.75411434913}, {"id": "siP8ApfGbxN1lQjycUUW1w",
+        "alias": "diningruhm-wien", "name": "Diningruhm", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/3a-cnh6TQ2dtsu1YOsThxA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/diningruhm-wien?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 3, "categories": [{"alias": "asianfusion", "title": "Asian
+        Fusion"}, {"alias": "japanese", "title": "Japanese"}, {"alias": "peruvian",
+        "title": "Peruvian"}], "rating": 5.0, "coordinates": {"latitude": 48.1903420224432,
+        "longitude": 16.3646982019747}, "transactions": [], "location": {"address1":
+        "Lambrechtgasse 9", "address2": "", "address3": null, "city": "Vienna", "zip_code":
+        "1040", "country": "AT", "state": "9", "display_address": ["Lambrechtgasse
+        9", "1040 Vienna", "Austria"]}, "phone": "+4319452224", "display_phone": "+43
+        1 9452224", "distance": 60154.20995179785}, {"id": "Z14LFj9o2jyp0RSkpO6N0w",
+        "alias": "vikis-pub-wien", "name": "Viki''s Pub", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yH-W7VeA34xyE_jRXYaLwA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/vikis-pub-wien?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 1, "categories": [{"alias": "bars", "title": "Bars"}], "rating":
+        5.0, "coordinates": {"latitude": 48.192517, "longitude": 16.385856}, "transactions":
+        [], "price": "\u20ac\u20ac", "location": {"address1": "Fasangasse 20", "address2":
+        null, "address3": "", "city": "Vienna", "zip_code": "1030", "country": "AT",
+        "state": "9", "display_address": ["Fasangasse 20", "1030 Vienna", "Austria"]},
+        "phone": "+436605772200", "display_phone": "+43 660 5772200", "distance":
+        60179.57023119144}, {"id": "ohCTGhJ5s6CUY3BbDxityg", "alias": "pentahotel-vienna-wien",
+        "name": "Pentahotel Vienna", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/2yRRq9_ryQRmYWKUi8gVEQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pentahotel-vienna-wien?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 12, "categories": [{"alias": "hotels", "title": "Hotels"},
+        {"alias": "bars", "title": "Bars"}, {"alias": "restaurants", "title": "Restaurants"}],
+        "rating": 4.0, "coordinates": {"latitude": 48.189998792209, "longitude": 16.3567766014963},
+        "transactions": [], "price": "\u20ac\u20ac", "location": {"address1": "Margaretenstr.
+        92", "address2": "", "address3": "", "city": "Vienna", "zip_code": "1050",
+        "country": "AT", "state": "9", "display_address": ["Margaretenstr. 92", "1050
+        Vienna", "Austria"]}, "phone": "+431546860", "display_phone": "+43 1 546860",
+        "distance": 60207.31093228788}, {"id": "uzkfJR3a98775c1d6-gbuA", "alias":
+        "ausklang-wien-3", "name": "Ausklang", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/-dsNmY0f5ITaiELtQw7Tlg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ausklang-wien-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 27, "categories": [{"alias": "cafes", "title": "Cafes"}, {"alias":
+        "cocktailbars", "title": "Cocktail Bars"}, {"alias": "modern_european", "title":
+        "Modern European"}], "rating": 4.5, "coordinates": {"latitude": 48.193304,
+        "longitude": 16.390591}, "transactions": [], "price": "\u20ac\u20ac", "location":
+        {"address1": "Kleistgasse 1", "address2": "", "address3": "", "city": "Vienna",
+        "zip_code": "1030", "country": "AT", "state": "9", "display_address": ["Kleistgasse
+        1", "1030 Vienna", "Austria"]}, "phone": "+4312369605", "display_phone": "+43
+        1 2369605", "distance": 60224.189947506195}, {"id": "pUzlGHd-Eyqc9MrPY1FXNA",
+        "alias": "tabacchi-wien-3", "name": "Tabacchi", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/lh2I7mYHqpcOsCVMUvGjOg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tabacchi-wien-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 7, "categories": [{"alias": "cocktailbars", "title": "Cocktail
+        Bars"}], "rating": 3.5, "coordinates": {"latitude": 48.19018, "longitude":
+        16.35494}, "transactions": [], "price": "\u20ac\u20ac", "location": {"address1":
+        "Ramperstorffergasse 61", "address2": "", "address3": "", "city": "Vienna",
+        "zip_code": "1050", "country": "AT", "state": "9", "display_address": ["Ramperstorffergasse
+        61", "1050 Vienna", "Austria"]}, "phone": "+436803071675", "display_phone":
+        "+43 680 3071675", "distance": 60247.50833683008}, {"id": "zENNRfzFteXYrRGG3YdHdw",
+        "alias": "grace-wien-2", "name": "Grace", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/QgyKOlINnTKG2eHvOFVHrw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/grace-wien-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 2, "categories": [{"alias": "restaurants", "title": "Restaurants"},
+        {"alias": "bars", "title": "Bars"}], "rating": 4.5, "coordinates": {"latitude":
+        48.1922, "longitude": 16.36948}, "transactions": [], "location": {"address1":
+        "Danhausergasse 3", "address2": null, "address3": "", "city": "Vienna", "zip_code":
+        "1040", "country": "AT", "state": "9", "display_address": ["Danhausergasse
+        3", "1040 Vienna", "Austria"]}, "phone": "+4315031022", "display_phone": "+43
+        1 5031022", "distance": 60309.68737406197}, {"id": "NthSWVrWvYaUVp9nv8-jJA",
+        "alias": "reinwein-wien-3", "name": "Reinwein", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/apIZZV-y9MoXhKjlpoS59g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/reinwein-wien-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 3, "categories": [{"alias": "bars", "title": "Bars"}], "rating":
+        5.0, "coordinates": {"latitude": 48.188368, "longitude": 16.330901}, "transactions":
+        [], "location": {"address1": "Reindorfgasse 10", "address2": "", "address3":
+        "", "city": "Vienna", "zip_code": "1150", "country": "AT", "state": "9", "display_address":
+        ["Reindorfgasse 10", "1150 Vienna", "Austria"]}, "phone": "+4369919411204",
+        "display_phone": "+43 699 19411204", "distance": 60365.185042996294}], "total":
+        57, "region": {"center": {"longitude": 16.4849853515625, "latitude": 47.65540056639365}}}'
+  recorded_at: Fri, 05 Nov 2021 21:31:56 GMT
+recorded_with: VCR 6.0.0

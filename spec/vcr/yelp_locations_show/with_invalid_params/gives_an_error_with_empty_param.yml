@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - bearer <API_KEY>
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '79'
+      Content-Type:
+      - application/json
+      X-Routing-Service:
+      - routing-main--useast1-b9c656cb7-rhbnk; site=public_api_v3
+      X-Zipkin-Id:
+      - 692a786f76da886d
+      Server:
+      - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-85-173-useast1aprod
+      X-Extlb:
+      - 10-65-85-173-useast1aprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 05 Nov 2021 21:36:22 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-ewr18123-EWR
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: '{"error": {"code": "NOT_FOUND", "description": "Resource could not
+        be found."}}'
+  recorded_at: Fri, 05 Nov 2021 21:36:22 GMT
+recorded_with: VCR 6.0.0
