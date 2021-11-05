@@ -1,5 +1,6 @@
 class Api::V1::YelpLocationsController < ApplicationController
   def index
+    validate_params
     locations = YelpLocationsFacade.dog_friendly_businesses(params[:location])
     render json: { data: locations }
   end
@@ -7,5 +8,23 @@ class Api::V1::YelpLocationsController < ApplicationController
   def show
     location = YelpLocationsFacade.find_location_by_id(params[:id])
     render json: { data: location }
+  end
+
+  private
+
+  def validate_params
+    raise ActionController::BadRequest if invalid_params?
+  end
+
+  def invalid_params?
+    params[:location].nil? || params[:location].empty?
+  end
+
+  def validate_id_params
+    raise ActionController::BadRequest if invalid_params?
+  end
+
+  def invalid_id_params?
+    params[:id].nil? || params[:id].empty?
   end
 end
