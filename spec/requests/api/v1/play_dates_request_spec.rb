@@ -1,6 +1,31 @@
 require 'rails_helper'
 
 describe Api::V1::PlayDatesController do
+  describe 'GET /v1/play_dates' do
+    let!(:dogs) { create_list :dog, 5 }
+    let!(:dog) { dogs.first }
+
+    let(:json) { JSON.parse(response.body, symbolize_names: true) }
+    let(:data) { json[:data] }
+    let(:attributes) { data[:attributes] }
+    let(:play_dates) { data[:attributes][:play_dates] }
+
+    before :each do
+      dogs[1..2].each do |d|
+        create :play_date, creator_dog_id: dog.id, invited_dog_id: d.id
+      end
+      dogs[3..4].each do |d|
+        create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id
+      end
+    end
+
+    it 'has all the dogs playdates' do
+      get api_v1_dog_play_dates_path(dog.id)
+      expect(attributes.size).to eq(10)
+      expect(play_dates.size).to eq(4)
+    end
+  end
+
   describe 'POST /v1/play_dates' do
     context 'with valid params' do
       let(:pd) { build :play_date }
