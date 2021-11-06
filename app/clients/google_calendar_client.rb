@@ -14,7 +14,7 @@ class GoogleCalendarClient
   def post(token, body)
     conn.post do |req|
       req.authorization :Bearer, token
-      req.url "/calendar/v3/calendars/primary/events"
+      req.url '/calendar/v3/calendars/primary/events'
       req.headers['Content-Type'] = 'application/json'
       req.body = body
     end
