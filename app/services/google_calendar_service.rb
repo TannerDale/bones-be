@@ -26,7 +26,7 @@ class GoogleCalendarService
             email: data[:invited_email]
           }
         ]
-      }
+      }.to_json
     end
   end
 end
