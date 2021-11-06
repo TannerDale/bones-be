@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--useast1-b9c656cb7-m8sdw; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
-      X-Zipkin-Id:
-      - 8356f40c26dac8bc
-      Ratelimit-Resettime:
-      - '2021-11-06T00:00:00+00:00'
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4989'
+      - '4983'
+      X-Routing-Service:
+      - routing-main--useast1-b9c656cb7-d5nkp; site=public_api_v3
       Server:
       - envoy
+      Ratelimit-Resettime:
+      - '2021-11-07T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 62d6e193ee6a882f
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
@@ -49,11 +49,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 05 Nov 2021 23:14:03 GMT
+      - Sat, 06 Nov 2021 20:38:41 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-dal21239-DAL
+      - cache-fty21355-FTY
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -84,7 +84,7 @@ http_interactions:
         "1530", "end": "2000", "day": 4}, {"is_overnight": false, "start": "1200",
         "end": "2000", "day": 5}, {"is_overnight": false, "start": "1200", "end":
         "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
-        ["delivery", "pickup"], "messaging": {"url": "https://www.yelp.com/raq/RTvR4W7K-59xFFZAUTMTbQ?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=OBMoK3r2ftITcAO2w2E5Ew#popup%3Araq",
+        ["pickup", "delivery"], "messaging": {"url": "https://www.yelp.com/raq/RTvR4W7K-59xFFZAUTMTbQ?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=OBMoK3r2ftITcAO2w2E5Ew#popup%3Araq",
         "use_case_text": "Message the Business"}}'
-  recorded_at: Fri, 05 Nov 2021 23:14:03 GMT
+  recorded_at: Sat, 06 Nov 2021 20:38:41 GMT
 recorded_with: VCR 6.0.0

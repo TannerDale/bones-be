@@ -27,11 +27,11 @@ http_interactions:
       Content-Type:
       - application/json
       X-Routing-Service:
-      - routing-main--useast1-b9c656cb7-zdglw; site=public_api_v3
-      X-Zipkin-Id:
-      - c07a3d3a890d1731
+      - routing-main--useast1-b9c656cb7-d5nkp; site=public_api_v3
       Server:
       - envoy
+      X-Zipkin-Id:
+      - c74102dd1afa3639
       X-B3-Sampled:
       - '0'
       X-Cloudmap:
@@ -43,11 +43,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 05 Nov 2021 23:14:02 GMT
+      - Sat, 06 Nov 2021 20:38:40 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-dal21228-DAL
+      - cache-fty21358-FTY
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -56,5 +56,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "NOT_FOUND", "description": "Resource could not
         be found."}}'
-  recorded_at: Fri, 05 Nov 2021 23:14:02 GMT
+  recorded_at: Sat, 06 Nov 2021 20:38:40 GMT
 recorded_with: VCR 6.0.0
