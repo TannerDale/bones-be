@@ -9,7 +9,7 @@ class GoogleCalendarService
     def calendar_body(data)
       {
         kind: 'calendar#event',
-        description: "playdate",
+        description: 'playdate',
         creator: {
           self: true
         },
