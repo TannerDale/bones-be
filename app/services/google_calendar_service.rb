@@ -1,5 +1,11 @@
 class GoogleCalendarService
   class << self
+    def create_event(token, body)
+      GoogleCalendarClient.create_event(token, calendar_body(body))
+    end
+
+    private
+
     def calendar_body(data)
       {
         kind: 'calendar#event',
