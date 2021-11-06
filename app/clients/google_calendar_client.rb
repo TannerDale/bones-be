@@ -1,7 +1,7 @@
 class GoogleCalendarClient
   class << self
-    def create_event(user, body)
-
+    def create_event(token, body)
+      post(token, body)
     end
   end
 
@@ -9,5 +9,14 @@ class GoogleCalendarClient
 
   def conn
     Faraday.new('https://googleapis.com')
+  end
+
+  def post(token, body)
+    conn.post do |req|
+      req.authorization :Bearer, token
+      req.url "/calendar/v3/calendars/primary/events"
+      req.headers['Content-Type'] = 'application/json'
+      req.body = body
+    end
   end
 end
