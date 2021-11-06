@@ -1,28 +1,28 @@
-class GoogleCalendarSerivice
+class GoogleCalendarService
   class << self
+    def create_event(token, body)
+      GoogleCalendarClient.create_event(token, calendar_body(body))
+    end
+
+    private
+
     def calendar_body(data)
       {
         kind: 'calendar#event',
-        created: datetime,
-        location: string,
+        description: "playdate",
         creator: {
-          id: data[:user_id],
-          email: data[:user_email],
           self: true
         },
         start: {
-          date: data[:date],
-          dateTime: datetime,
-          timeZone: datetime
+          dateTime: data[:start_time],
+          timeZone: data[:timezone]
         },
         end: {
-          date: data[:date],
-          dateTime: datetime,
-          timeZone: string
+          dateTime: data[:end_time],
+          timeZone: data[:timezone]
         },
         attendees: [
           {
-            id: data[:invited_id],
             email: data[:invited_email]
           }
         ]
