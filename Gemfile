@@ -22,7 +22,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'jsonapi-serializer'
 gem 'travis'
-gem 'omniauth-google-oauth2'
+# gem 'omniauth-google-oauth2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

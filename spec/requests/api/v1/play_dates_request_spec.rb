@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::PlayDatesController do
+describe Api::V1::PlayDatesController, :vcr do
   describe 'GET /v1/play_dates' do
     let!(:dogs) { create_list :dog, 5 }
     let!(:dog) { dogs.first }
@@ -39,7 +39,8 @@ describe Api::V1::PlayDatesController do
             location_id: pd.location_id,
             date: pd.date,
             time: pd.time
-          }
+          },
+          token: "ya29.a0ARrdaM-AFsR-_zubgYwerPzkVVNQvW1CQSg49GzgTOxRD4vTMtIta_F_JF6n7Bdlbr_61eFpliOoiFmZztGDqrk5MiTmpV57LMScjiY1gR94XeAH118HxnnnMUuHZErE4Wpn4iUbgdbjBcnc2wWs2HcAifCA"
         }
       end
 
