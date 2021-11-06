@@ -1,7 +1,7 @@
 class GoogleCalendarClient
   class << self
     def create_event(token, body)
-      post(token, body)
+      parse_data(post(token, body))
     end
   end
 
@@ -18,5 +18,9 @@ class GoogleCalendarClient
       req.headers['Content-Type'] = 'application/json'
       req.body = body
     end
+  end
+
+  def parse_data(response)
+    JSON.parse(response.body, symbolize_names: true)
   end
 end
