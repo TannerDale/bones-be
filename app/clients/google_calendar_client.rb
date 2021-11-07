@@ -1,6 +1,6 @@
 class GoogleCalendarClient
   class << self
-    def create_event(token, body, email)
+    def create_event(body, email, token)
       parse_data(post(token, body, email))
     end
 

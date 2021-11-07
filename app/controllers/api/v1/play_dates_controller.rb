@@ -11,17 +11,20 @@ class Api::V1::PlayDatesController < ApplicationController
 
   private
 
+  def calendar_params
+    {
+      email: params[:email],
+      token: params[:token]
+    }
+  end
+
   def create_google_event
-    event = GoogleCalendarFacade.create_event(params[:token], play_date_params, params[:email])
+    event = GoogleCalendarFacade.create_event(play_date_params.merge(calendar_params))
     verify_event_creation(event)
   end
 
   def verify_event_creation(event)
-    failure_bruh if JSON.parse(event).key?('error')
-  end
-
-  def failure_bruh
-    flash[:alert] = 'Calendar event creation failed, remember to put the car in bark'
+    render json: { error: 'event creation failed' } if JSON.parse(event).key?('error')
   end
 
   def play_date_params
