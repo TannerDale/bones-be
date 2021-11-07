@@ -6,6 +6,8 @@ class Api::V1::PlayDatesController < ApplicationController
   end
 
   def create
+    session[:user_token] = params[:token]
+
     create_google_event if PlayDate.create!(play_date_params)
   end
 

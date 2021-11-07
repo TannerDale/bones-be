@@ -6,16 +6,16 @@ class GoogleCalendarClient
 
     private
 
-    def conn(token)
-      Faraday.new('https://googleapis.com') do |c|
-        c.authorization :Bearer, token
-      end
-    end
+    # def conn(token)
+    #   Faraday.new('https://googleapis.com') do |c|
+    #   end
+    # end
 
     def post(token, body, email)
-      conn(token).post do |req|
-        req.url "/calendar/v3/calendars/#{email}/events"
+      Faraday.post("https://googleapis.com/calendar/v3/calendars/#{email}/events") do |req|
         req.body = body
+        req.headers['Authorization'] = "Bearer #{token}"
+        req.headers['Content-Type'] = 'applcation/json'
       end
     end
 
