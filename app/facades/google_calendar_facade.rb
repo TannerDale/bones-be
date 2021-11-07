@@ -1,7 +1,7 @@
 class GoogleCalendarFacade
   class << self
-    def create_event(token, body, email)
-      GoogleCalendarService.create_event(token, body.merge(format_dates(body)), email)
+    def create_event(body)
+      GoogleCalendarService.create_event(body.merge(format_dates(body)))
     end
 
     def format_dates(body)
