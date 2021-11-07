@@ -1,7 +1,7 @@
 class GoogleCalendarClient
   class << self
-    def create_event(token, body)
-      parse_data(post(token, body))
+    def create_event(token, body, email)
+      parse_data(post(token, body, email))
     end
 
     private
@@ -12,9 +12,9 @@ class GoogleCalendarClient
       end
     end
 
-    def post(token, body)
+    def post(token, body, email)
       conn(token).post do |req|
-        req.url '/calendar/v3/calendars/primary/events'
+        req.url "/calendar/v3/calendars/#{email}/events"
         req.body = body
       end
     end

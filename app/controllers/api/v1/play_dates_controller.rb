@@ -12,7 +12,7 @@ class Api::V1::PlayDatesController < ApplicationController
   private
 
   def create_google_event
-    event = GoogleCalendarFacade.create_event(params[:token], play_date_params)
+    event = GoogleCalendarFacade.create_event(params[:token], play_date_params, params[:email])
     verify_event_creation(event)
   end
 
