@@ -34,5 +34,36 @@ RSpec.describe Dog, type: :model do
       expect(Dog.exclude_user_dogs(3).first.trained).to eq('yes')
       expect(Dog.exclude_user_dogs(4).first.trained).to eq('no')
     end
+
+    it 'has dogs for a user' do
+      expect(Dog.user_dogs(3)).to eq(trained)
+    end
+  end
+
+  describe 'play dates' do
+    let!(:dog1) { create :dog }
+    let!(:dog2) { create :dog }
+    let!(:play_date1) { create :play_date, creator_dog_id: dog1.id, invited_dog_id: dog2.id }
+    let!(:play_date2) { create :play_date, creator_dog_id: dog1.id, invited_dog_id: dog2.id, invite_status: 1 }
+    let!(:play_date3) { create :play_date, creator_dog_id: dog1.id, invited_dog_id: dog2.id }
+    let!(:play_date4) { create :play_date, creator_dog_id: dog1.id, invited_dog_id: dog2.id, invite_status: 1 }
+
+    it 'has all play dates' do
+      result = dog1.play_dates
+
+      expect(result).to eq([play_date1, play_date2, play_date3, play_date4])
+    end
+
+    it 'has pending play dates' do
+      result = dog1.pending_play_dates
+
+      expect(result).to eq([play_date1, play_date3])
+    end
+
+    it 'has accepted play dates' do
+      result = dog1.accepted_play_dates
+
+      expect(result).to eq([play_date2, play_date4])
+    end
   end
 end
