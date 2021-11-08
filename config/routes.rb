@@ -7,8 +7,6 @@ Rails.application.routes.draw do
         get '/play_dates', controller: :play_dates, action: :index
       end
 
-      resources :sessions, only: %i[create destroy]
-
       resources :play_dates, only: :create
 
       resources :yelp_locations, only: :index
