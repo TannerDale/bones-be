@@ -39,9 +39,7 @@ describe Api::V1::PlayDatesController, :vcr do
             location_id: pd.location_id,
             date: pd.date,
             time: pd.time
-          },
-          email: 'tannerdale72@gmail.com',
-          token: "ya29.a0ARrdaM-AFsR-_zubgYwerPzkVVNQvW1CQSg49GzgTOxRD4vTMtIta_F_JF6n7Bdlbr_61eFpliOoiFmZztGDqrk5MiTmpV57LMScjiY1gR94XeAH118HxnnnMUuHZErE4Wpn4iUbgdbjBcnc2wWs2HcAifCA"
+          }
         }
       end
 
