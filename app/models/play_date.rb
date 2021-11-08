@@ -7,4 +7,10 @@ class PlayDate < ApplicationRecord
   validates :time, presence: true
 
   enum invite_status: %i[pending accepted rejected]
+
+  def self.users_invited(id)
+    pending
+      .joins(:invited_dog)
+      .merge(Dog.user_dogs(id))
+  end
 end
