@@ -104,16 +104,18 @@ describe Api::V1::PlayDatesController, :vcr do
 
   describe 'PATCH /v1/play_date/:id' do
     let!(:play_date) { create :play_date }
-    let(:valid_params) do
+    let(:params) do
       {
         creator_dog: play_date.creator_dog_id,
         invited_dog: play_date.invited_dog_id
       }
     end
+    let(:creator_dog) { play_date.creator_dog_id }
+    let(:invited_dog) { play_date.invited_dog_id }
 
     context 'with valid params' do
       it 'updates the playdates invite status to accepted' do
-        patch api_v1_play_date_path(play_date), params: valid_params.merge({ status: 1 })
+        patch api_v1_play_date_path(play_date), params: params.merge({ status: 1 })
 
         play_date.reload
 
@@ -121,11 +123,43 @@ describe Api::V1::PlayDatesController, :vcr do
       end
 
       it 'updates the playdates invite status to rejected' do
-        patch api_v1_play_date_path(play_date), params: valid_params.merge({ status: 2 })
+        patch api_v1_play_date_path(play_date), params: params.merge({ status: 2 })
 
         play_date.reload
 
         expect(play_date.invite_status).to eq('rejected')
+      end
+    end
+
+    context 'with invalid params' do
+      it 'returns 400 if no creator_dog' do
+        patch api_v1_play_date_path(play_date), params: { invited_dog_id: invited_dog, status: 1 }
+
+        expect(response).to have_http_status 400
+      end
+
+      it 'returns 400 if no invited_dog' do
+        patch api_v1_play_date_path(play_date), params: { creator_dog_id: creator_dog, status: 1 }
+
+        expect(response).to have_http_status 400
+      end
+
+      it 'returns 400 if no status' do
+        patch api_v1_play_date_path(play_date), params: params
+
+        expect(response).to have_http_status 400
+      end
+
+      it 'returns 400 if status isnt 1 or 2' do
+        patch api_v1_play_date_path(play_date), params: params.merge({ status: 3 })
+
+        expect(response).to have_http_status 400
+      end
+
+      it 'returns 400 if playdate is not found' do
+        patch api_v1_play_date_path(play_date), params: params.merge({ status: 3, creator_dog_id: 111_111 })
+
+        expect(response).to have_http_status 400
       end
     end
   end
