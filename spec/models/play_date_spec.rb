@@ -11,4 +11,8 @@ RSpec.describe PlayDate, type: :model do
     it { should validate_presence_of :date }
     it { should validate_presence_of :time }
   end
+
+  describe 'enums' do
+    it { should define_enum_for(:invite_status).with_values(%i[pending accepted rejected]) }
+  end
 end

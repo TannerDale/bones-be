@@ -5,4 +5,6 @@ class PlayDate < ApplicationRecord
   validates :location_id, presence: true
   validates :date, presence: true
   validates :time, presence: true
+
+  enum invite_status: %i[pending accepted rejected]
 end
