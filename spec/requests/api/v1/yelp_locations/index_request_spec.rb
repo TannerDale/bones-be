@@ -1,11 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'yelp_locations#index', :vcr do
-
   let(:locations) { JSON.parse(response.body, symbolize_names: true) }
 
-  it "can get all businesses from searched location" do
-
+  it 'can get all businesses from searched location' do
     get '/api/v1/yelp_locations?location=denver'
 
     expect(response).to be_successful
@@ -15,7 +13,7 @@ RSpec.describe 'yelp_locations#index', :vcr do
     first_location = locations[:data].first
 
     expect(first_location).to be_a Hash
-    
+
     expect(first_location).to have_key(:name)
     expect(first_location).to have_key(:address)
     expect(first_location).to have_key(:phone)
@@ -24,5 +22,19 @@ RSpec.describe 'yelp_locations#index', :vcr do
 
     expect(first_location[:address]).to be_a String
     expect(first_location[:rating]).to be_an Float
+  end
+
+  context 'sad paths' do
+    it 'gives an error with empty param' do
+      get '/api/v1/yelp_locations?location='
+
+      expect(response.status).to eq(400)
+    end
+
+    it 'gives an error with missing param' do
+      get '/api/v1/yelp_locations'
+
+      expect(response.status).to eq(400)
+    end
   end
 end

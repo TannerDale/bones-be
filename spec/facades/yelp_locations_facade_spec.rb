@@ -5,7 +5,6 @@ RSpec.describe 'yelp facade', :vcr do
   let(:id) { 'RTvR4W7K-59xFFZAUTMTbQ' }
 
   it 'dog friendly businesses' do
-
     results = YelpLocationsFacade.dog_friendly_businesses(location)
 
     expect(results).to be_an Array

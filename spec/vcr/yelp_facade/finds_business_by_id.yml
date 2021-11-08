@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2021-11-05T00:00:00+00:00'
-      Server:
-      - envoy
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--useast1-b9c656cb7-pkrzj; site=public_api_v3
-      X-Zipkin-Id:
-      - 3957130c466dc233
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4942'
+      - '4997'
+      X-Routing-Service:
+      - routing-main--useast1-b9c656cb7-72tv2; site=public_api_v3
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - 550f02071a8ffe40
+      Ratelimit-Resettime:
+      - '2021-11-09T00:00:00+00:00'
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
-      - 10-65-73-48-useast1aprod
+      - 10-65-190-140-useast1bprod
       X-Extlb:
-      - 10-65-73-48-useast1aprod
+      - 10-65-190-140-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Thu, 04 Nov 2021 20:18:03 GMT
+      - Mon, 08 Nov 2021 16:21:09 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-dal21243-DAL
+      - cache-iah17229-IAH
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -68,7 +68,7 @@ http_interactions:
         "Lucky Noodles", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/uoXE8rVcYAV4R6njOCxrpw/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/lucky-noodles-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "phone": "+17209171000", "display_phone": "(720) 917-1000", "review_count":
-        114, "categories": [{"alias": "thai", "title": "Thai"}, {"alias": "noodles",
+        115, "categories": [{"alias": "thai", "title": "Thai"}, {"alias": "noodles",
         "title": "Noodles"}, {"alias": "coffee", "title": "Coffee & Tea"}], "rating":
         4.5, "location": {"address1": "1201 E Colfax Ave", "address2": "Ste 102",
         "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
@@ -86,5 +86,5 @@ http_interactions:
         "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         ["delivery", "pickup"], "messaging": {"url": "https://www.yelp.com/raq/RTvR4W7K-59xFFZAUTMTbQ?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=OBMoK3r2ftITcAO2w2E5Ew#popup%3Araq",
         "use_case_text": "Message the Business"}}'
-  recorded_at: Thu, 04 Nov 2021 20:18:03 GMT
+  recorded_at: Mon, 08 Nov 2021 16:21:09 GMT
 recorded_with: VCR 6.0.0

@@ -1,6 +1,7 @@
 class Api::V1::PlayDatesController < ApplicationController
   def index
     dog = Dog.find(params[:dog_id])
+
     render json: DogWithPlaydatesSerializer.new(dog)
   end
 
@@ -11,6 +12,6 @@ class Api::V1::PlayDatesController < ApplicationController
   private
 
   def play_date_params
-    params.permit(:creator_dog_id, :invited_dog_id, :location_id, :date, :time)
+    params.require(:object).permit(:creator_dog_id, :invited_dog_id, :location_id, :date, :time)
   end
 end

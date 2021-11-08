@@ -18,10 +18,11 @@ gem 'puma', '~> 3.11'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-gem 'travis'
-gem 'jsonapi-serializer'
-gem 'figaro'
 gem 'faraday'
+gem 'figaro'
+gem 'jsonapi-serializer'
+gem 'travis'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
@@ -29,13 +30,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
-  gem 'launchy'
-  gem 'pry'
-  gem 'simplecov'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'launchy'
+  gem 'pry'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 group :development do
@@ -50,6 +51,5 @@ group :test do
   gem 'webmock'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

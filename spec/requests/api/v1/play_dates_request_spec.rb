@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::PlayDatesController do
+describe Api::V1::PlayDatesController, :vcr do
   describe 'GET /v1/play_dates' do
     let!(:dogs) { create_list :dog, 5 }
     let!(:dog) { dogs.first }
@@ -33,11 +33,13 @@ describe Api::V1::PlayDatesController do
       let(:dog2) { create :dog }
       let(:valid_params) do
         {
-          creator_dog_id: dog1.id,
-          invited_dog_id: dog2.id,
-          location_id: pd.location_id,
-          date: pd.date,
-          time: pd.time
+          object: {
+            creator_dog_id: dog1.id,
+            invited_dog_id: dog2.id,
+            location_id: pd.location_id,
+            date: pd.date,
+            time: pd.time
+          }
         }
       end
 
@@ -64,35 +66,35 @@ describe Api::V1::PlayDatesController do
       end
 
       it '400s no created dog id' do
-        post api_v1_play_dates_path, params: valid_params.merge({ creator_dog_id: '' })
+        post api_v1_play_dates_path, params: { object: valid_params.merge({ creator_dog_id: '' }) }
 
         expect(response.status).to eq(400)
         expect(PlayDate.count).to eq(0)
       end
 
       it '400s no invited dog id' do
-        post api_v1_play_dates_path, params: valid_params.merge({ invited_dog_id: '' })
+        post api_v1_play_dates_path, params: { object: valid_params.merge({ invited_dog_id: '' }) }
 
         expect(response.status).to eq(400)
         expect(PlayDate.count).to eq(0)
       end
 
       it '400s no location id' do
-        post api_v1_play_dates_path, params: valid_params.merge({ location_id: '' })
+        post api_v1_play_dates_path, params: { object: valid_params.merge({ location_id: '' }) }
 
         expect(response.status).to eq(400)
         expect(PlayDate.count).to eq(0)
       end
 
       it '400s no date' do
-        post api_v1_play_dates_path, params: valid_params.merge({ date: '' })
+        post api_v1_play_dates_path, params: { object: valid_params.merge({ date: '' }) }
 
         expect(response.status).to eq(400)
         expect(PlayDate.count).to eq(0)
       end
 
       it '400s no time' do
-        post api_v1_play_dates_path, params: valid_params.merge({ time: '' })
+        post api_v1_play_dates_path, params: { object: valid_params.merge({ time: '' }) }
 
         expect(response.status).to eq(400)
         expect(PlayDate.count).to eq(0)

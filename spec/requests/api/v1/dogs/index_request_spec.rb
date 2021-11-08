@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'dog#index' do
-  it "can get all dogs from a user id" do
+  it 'can get all dogs from a user id' do
     create_list(:dog, 5, user_id: 2)
     create_list(:dog, 5, user_id: 3)
 
@@ -41,7 +41,7 @@ RSpec.describe 'dog#index' do
     expect(results).not_to include(3)
   end
 
-  it 'gets items' do
+  it 'gets dogs' do
     create_list(:dog, 25)
 
     get '/api/v1/dogs?page=1'
