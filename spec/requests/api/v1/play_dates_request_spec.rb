@@ -101,4 +101,32 @@ describe Api::V1::PlayDatesController, :vcr do
       end
     end
   end
+
+  describe 'PATCH /v1/play_date/:id' do
+    let!(:play_date) { create :play_date }
+    let(:valid_params) do
+      {
+        creator_dog: play_date.creator_dog_id,
+        invited_dog: play_date.invited_dog_id
+      }
+    end
+
+    context 'with valid params' do
+      it 'updates the playdates invite status to accepted' do
+        patch api_v1_play_date_path(play_date), params: valid_params.merge({ status: 1 })
+
+        play_date.reload
+
+        expect(play_date.invite_status).to eq('accepted')
+      end
+
+      it 'updates the playdates invite status to rejected' do
+        patch api_v1_play_date_path(play_date), params: valid_params.merge({ status: 2 })
+
+        play_date.reload
+
+        expect(play_date.invite_status).to eq('rejected')
+      end
+    end
+  end
 end

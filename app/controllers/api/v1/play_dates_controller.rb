@@ -9,6 +9,12 @@ class Api::V1::PlayDatesController < ApplicationController
     PlayDate.create!(play_date_params)
   end
 
+  def update
+    play_date = PlayDate.find_by(creator_dog_id: params[:creator_dog], invited_dog_id: params[:invited_dog])
+
+    play_date.update_attribute(:invite_status, params[:status].to_i)
+  end
+
   private
 
   def play_date_params
