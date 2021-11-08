@@ -15,7 +15,19 @@ class Dog < ApplicationRecord
     where.not(user_id: id)
   end
 
+  scope :user_dogs, ->(id) {
+    where(user_id: id)
+  }
+
   def play_dates
     created_play_dates + invited_play_dates
+  end
+
+  def pending_play_dates
+    created_play_dates.pending
+  end
+
+  def accepted_play_dates
+    created_play_dates.accepted + invited_play_dates.accepted
   end
 end
