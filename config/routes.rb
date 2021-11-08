@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :user_dogs, only: :index
 
-      resources :dogs, only: %i[create index] do
+      resources :dogs, only: %i[index show create] do
         get '/play_dates', controller: :play_dates, action: :index
       end
 
