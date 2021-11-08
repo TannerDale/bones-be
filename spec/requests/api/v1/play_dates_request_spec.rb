@@ -8,21 +8,23 @@ describe Api::V1::PlayDatesController, :vcr do
     let(:json) { JSON.parse(response.body, symbolize_names: true) }
     let(:data) { json[:data] }
     let(:attributes) { data[:attributes] }
-    let(:play_dates) { data[:attributes][:play_dates] }
+    let(:pending_play_dates) { data[:attributes][:pending_play_dates] }
+    let(:accepted_play_dates) { data[:attributes][:accepted_play_dates] }
 
     before :each do
       dogs[1..2].each do |d|
         create :play_date, creator_dog_id: dog.id, invited_dog_id: d.id
       end
       dogs[3..4].each do |d|
-        create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id
+        create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id, invite_status: 1
       end
     end
 
     it 'has all the dogs playdates' do
       get api_v1_dog_play_dates_path(dog.id)
-      expect(attributes.size).to eq(10)
-      expect(play_dates.size).to eq(4)
+      expect(attributes.size).to eq(11)
+      expect(pending_play_dates.size).to eq(2)
+      expect(accepted_play_dates.size).to eq(2)
     end
   end
 
