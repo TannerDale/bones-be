@@ -3,6 +3,12 @@ class Api::V1::DogsController < ApplicationController
     render json: DogSerializer.new(paginated_dogs)
   end
 
+  def show
+    dog = Dog.find(params[:id])
+
+    render json: DogWithPlaydatesSerializer.new(dog)
+  end
+
   def create
     Dog.create!(dog_params)
   end

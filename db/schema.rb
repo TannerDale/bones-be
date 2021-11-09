@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_04_184254) do
+ActiveRecord::Schema.define(version: 2021_11_08_175426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_11_04_184254) do
     t.time "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "invite_status", default: 0
     t.index ["creator_dog_id"], name: "index_play_dates_on_creator_dog_id"
     t.index ["invited_dog_id"], name: "index_play_dates_on_invited_dog_id"
   end
