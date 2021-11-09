@@ -9,7 +9,7 @@ Dog.destroy_all
 PlayDate.destroy_all
 
 100.times do
-  Dog.create(
+  Dog.create!(
     name: Faker::Creature::Dog.name,
     size: %w[small medium large].sample,
     breed: Faker::Creature::Dog.breed,
@@ -23,12 +23,12 @@ PlayDate.destroy_all
 end
 
 Dog.all[..-2].each_with_index do |dog, i|
-  PlayDate.create(
+  PlayDate.create!(
     creator_dog_id: dog.id,
     invited_dog_id: Dog.all[i + 1].id,
     date: Date.today,
     time: Time.now,
     location_id: "12y378",
-    invite_status: [0, 1].sample
+    invite_status: i % 2
   )
 end
