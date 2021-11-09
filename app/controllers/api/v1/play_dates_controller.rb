@@ -6,7 +6,7 @@ class Api::V1::PlayDatesController < ApplicationController
       dog = Dog.find(params[:dog_id])
       render json: DogWithPlaydatesSerializer.new(dog)
     else
-      render json: PlayDateSerializer.new(PlayDate.for_user(params[:user_id]))
+      render json: PlayDateSerializer.new(PlayDateFacade.user_play_dates(params))
     end
   end
 
