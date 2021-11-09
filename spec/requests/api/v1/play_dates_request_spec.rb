@@ -124,12 +124,12 @@ describe Api::V1::PlayDatesController, :vcr do
         expect(play_date.invite_status).to eq('accepted')
       end
 
-      it 'updates the playdates invite status to rejected' do
+      it 'deletes the playdate if the status is rejected' do
+        id = play_date.id
+
         patch api_v1_play_date_path(play_date), params: params.merge({ status: 2 })
 
-        play_date.reload
-
-        expect(play_date.invite_status).to eq('rejected')
+        expect(PlayDate.where(id: id)).to be_empty
       end
     end
 
