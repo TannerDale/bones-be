@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Api::V1::PlayDatesController, :vcr do
   describe 'GET /v1/play_dates' do
     let!(:dogs) { create_list :dog, 5 }
-    let!(:dog) { dogs.first }
+    let!(:dog) { create :dog, user_id: 1 }
 
     let(:json) { JSON.parse(response.body, symbolize_names: true) }
     let(:data) { json[:data] }
@@ -17,6 +17,7 @@ describe Api::V1::PlayDatesController, :vcr do
       end
       dogs[3..4].each do |d|
         create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id, invite_status: 1
+        create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id, invite_status: 0
       end
     end
 
@@ -25,6 +26,18 @@ describe Api::V1::PlayDatesController, :vcr do
       expect(attributes.size).to eq(11)
       expect(pending_play_dates.size).to eq(2)
       expect(accepted_play_dates.size).to eq(2)
+    end
+
+    it 'has all of the users pending invites' do
+      get api_v1_play_dates_path, params: { user_id: 1, status: 'invited' }
+
+      expect(data.size).to eq(2)
+    end
+
+    it 'has all of the users playdates' do
+      get api_v1_play_dates_path, params: { user_id: 1, status: 'all' }
+
+      expect(data.size).to eq(6)
     end
   end
 
