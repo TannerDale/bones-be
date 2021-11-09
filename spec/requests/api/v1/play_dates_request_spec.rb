@@ -134,18 +134,6 @@ describe Api::V1::PlayDatesController, :vcr do
     end
 
     context 'with invalid params' do
-      it 'returns 400 if no creator_dog' do
-        patch api_v1_play_date_path(play_date), params: { invited_dog_id: invited_dog, status: 1 }
-
-        expect(response).to have_http_status 400
-      end
-
-      it 'returns 400 if no invited_dog' do
-        patch api_v1_play_date_path(play_date), params: { creator_dog_id: creator_dog, status: 1 }
-
-        expect(response).to have_http_status 400
-      end
-
       it 'returns 400 if no status' do
         patch api_v1_play_date_path(play_date), params: params
 
