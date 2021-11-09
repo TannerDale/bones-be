@@ -1,6 +1,6 @@
 class YelpLocationsFacade
   class << self
-    def dog_friendly_businesses(location)
+    def dog_friendly_businesses(location = 'Denver')
       YelpService.find_locations(location).map do |business|
         format_business_data(business)
       end
