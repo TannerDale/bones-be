@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-B3-Sampled:
-      - '0'
-      X-Zipkin-Id:
-      - 8cead9c7ae0d4cd5
-      Ratelimit-Remaining:
-      - '4968'
       Server:
       - envoy
+      X-Routing-Service:
+      - routing-main--useast1-b9c656cb7-vgx8s; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4999'
+      X-Zipkin-Id:
+      - 743bc58c939ee1df
       Ratelimit-Resettime:
-      - '2021-11-10T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--useast1-b9c656cb7-gs95m; site=public_api_v3
+      - '2021-11-11T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
-      - 10-65-190-140-useast1bprod
+      - 10-65-73-48-useast1aprod
       X-Extlb:
-      - 10-65-190-140-useast1bprod
+      - 10-65-73-48-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 09 Nov 2021 23:40:32 GMT
+      - Wed, 10 Nov 2021 00:18:40 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-dal21252-DAL
+      - cache-dal21245-DAL
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -86,5 +86,5 @@ http_interactions:
         "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         ["pickup", "delivery"], "messaging": {"url": "https://www.yelp.com/raq/RTvR4W7K-59xFFZAUTMTbQ?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=OBMoK3r2ftITcAO2w2E5Ew#popup%3Araq",
         "use_case_text": "Message the Business"}}'
-  recorded_at: Tue, 09 Nov 2021 23:40:31 GMT
+  recorded_at: Wed, 10 Nov 2021 00:18:40 GMT
 recorded_with: VCR 6.0.0

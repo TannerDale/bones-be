@@ -10,6 +10,12 @@ class Api::V1::PlayDatesController < ApplicationController
     end
   end
 
+  def show
+    playdate = PlayDate.find(params[:id])
+
+    render json: PlayDateSerializer.new(playdate)
+  end
+
   def create
     PlayDate.create!(play_date_params)
   end

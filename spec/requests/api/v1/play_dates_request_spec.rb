@@ -166,4 +166,29 @@ describe Api::V1::PlayDatesController, :vcr do
       end
     end
   end
+
+  describe 'GET /v1/play_dates/:id' do
+    let!(:dog1) { create :dog, user_id: 1 }
+    let!(:dog2) { create :dog, user_id: 1 }
+    let!(:play_date) { create :play_date, creator_dog_id: dog1.id, invited_dog_id: dog2.id }
+    let(:json) { JSON.parse(response.body, symbolize_names: true) }
+    let(:data) { json[:data] }
+
+    context 'with a valid play_date id' do
+      before { get api_v1_play_date_path(play_date.id) }
+
+      it 'has the info for the play_date' do
+        expect(data[:id].to_i).to eq(play_date.id)
+        expect(data[:attributes].size).to eq(3)
+      end
+    end
+
+    context 'with invalid play date id' do
+      before { get api_v1_play_date_path(1_929_394_029_301) }
+
+      it 'returns 404' do
+        expect(response).to have_http_status(404)
+      end
+    end
+  end
 end
