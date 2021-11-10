@@ -2,12 +2,7 @@ class Api::V1::PlayDatesController < ApplicationController
   before_action :validate_update_params, only: :update
 
   def index
-    if params[:dog_id]
-      dog = Dog.find(params[:dog_id])
-      render json: DogWithPlaydatesSerializer.new(dog)
-    else
-      render json: PlayDateSerializer.new(PlayDateFacade.user_play_dates(params))
-    end
+    render json: PlayDateSerializer.new(PlayDateFacade.user_play_dates(params))
   end
 
   def show
