@@ -179,7 +179,7 @@ describe Api::V1::PlayDatesController, :vcr do
 
       it 'has the info for the play_date' do
         expect(data[:id].to_i).to eq(play_date.id)
-        expect(data[:attributes].size).to eq(3)
+        expect(data[:attributes].size).to eq(4)
       end
     end
 
