@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-B3-Sampled:
-      - '0'
-      Ratelimit-Dailylimit:
-      - '5000'
       X-Routing-Service:
-      - routing-main--useast1-b9c656cb7-7grvx; site=public_api_v3
-      Ratelimit-Remaining:
-      - '4998'
-      X-Zipkin-Id:
-      - af4a9211bd8b4e11
-      Ratelimit-Resettime:
-      - '2021-11-09T00:00:00+00:00'
+      - routing-main--useast1-b9c656cb7-rvqcp; site=public_api_v3
       Server:
       - envoy
+      X-Zipkin-Id:
+      - 6c7994e299712e54
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Remaining:
+      - '4998'
+      Ratelimit-Resettime:
+      - '2021-11-11T00:00:00+00:00'
       X-Cloudmap:
       - routing_useast1
       X-Proxied:
-      - 10-65-190-140-useast1bprod
+      - 10-65-85-173-useast1aprod
       X-Extlb:
-      - 10-65-190-140-useast1bprod
+      - 10-65-85-173-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 08 Nov 2021 16:21:09 GMT
+      - Wed, 10 Nov 2021 00:18:41 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iah17238-IAH
+      - cache-dal21255-DAL
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -64,39 +64,167 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"businesses": [{"id": "MWFGHr6NOg7pAoLgbgFdsQ", "alias": "doppio-coffee-denver",
-        "name": "Doppio Coffee", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Y3nLL8rizY1-z7_PG6ja0A/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/doppio-coffee-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 97, "categories": [{"alias": "coffee", "title": "Coffee &
-        Tea"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
-        "sandwiches", "title": "Sandwiches"}], "rating": 4.5, "coordinates": {"latitude":
-        39.7402, "longitude": -104.97129}, "transactions": ["delivery", "pickup"],
-        "price": "$", "location": {"address1": "1245 E Colfax Ave", "address2": "Ste
-        105", "address3": "", "city": "Denver", "zip_code": "80218", "country": "US",
-        "state": "CO", "display_address": ["1245 E Colfax Ave", "Ste 105", "Denver,
-        CO 80218"]}, "phone": "+13035377794", "display_phone": "(303) 537-7794", "distance":
-        539.8171882096158}, {"id": "jsux4d-27MbCymwksz9RZg", "alias": "waffle-brothers-pub-style-denver",
-        "name": "Waffle Brothers Pub Style", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/SJDAKaDYwLbOVapwr4kY5w/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/waffle-brothers-pub-style-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 285, "categories": [{"alias": "breakfast_brunch", "title":
-        "Breakfast & Brunch"}, {"alias": "waffles", "title": "Waffles"}, {"alias":
-        "chickenshop", "title": "Chicken Shop"}], "rating": 4.0, "coordinates": {"latitude":
-        39.74349, "longitude": -104.971216385249}, "transactions": ["delivery", "pickup"],
-        "price": "$$", "location": {"address1": "1707 Lafayette St", "address2": "",
+      string: '{"businesses": [{"id": "No2VmMM6QchZSYtCk6k0vQ", "alias": "dp-dough-denver",
+        "name": "DP Dough", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/MBkGfvYy-rTgO8tVuYzdQQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/dp-dough-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 318, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "italian", "title": "Italian"}], "rating": 3.5, "coordinates": {"latitude":
+        39.73971, "longitude": -104.97111}, "transactions": ["delivery", "pickup"],
+        "price": "$", "location": {"address1": "1228 E Colfax Ave", "address2": "",
         "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
-        "CO", "display_address": ["1707 Lafayette St", "Denver, CO 80218"]}, "phone":
-        "+17207085150", "display_phone": "(720) 708-5150", "distance": 889.6369720405207},
-        {"id": "kRiwvntcXKDPdtpYKcGPhg", "alias": "onefold-denver", "name": "Onefold",
-        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/s4ncc00yizhXGRQvhiMbhA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/onefold-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 792, "categories": [{"alias": "breakfast_brunch", "title":
-        "Breakfast & Brunch"}, {"alias": "cafes", "title": "Cafes"}], "rating": 4.5,
-        "coordinates": {"latitude": 39.744667, "longitude": -104.969325}, "transactions":
-        ["pickup", "delivery"], "price": "$$", "location": {"address1": "1420 E 18th
+        "CO", "display_address": ["1228 E Colfax Ave", "Denver, CO 80218"]}, "phone":
+        "+13038399663", "display_phone": "(303) 839-9663", "distance": 473.8230907508149},
+        {"id": "FfwLdr5-TBINeZbR4ey_WQ", "alias": "irish-snug-denver", "name": "Irish
+        Snug", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/4Tfw-AgjlGw6ZM9LDSLU0g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/irish-snug-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 493, "categories": [{"alias": "venues", "title": "Venues &
+        Event Spaces"}, {"alias": "irish_pubs", "title": "Irish Pub"}, {"alias": "burgers",
+        "title": "Burgers"}], "rating": 4.0, "coordinates": {"latitude": 39.7402,
+        "longitude": -104.97194}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "1201 E Colfax Ave", "address2": null, "address3":
+        "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
+        "display_address": ["1201 E Colfax Ave", "Denver, CO 80218"]}, "phone": "+13038391394",
+        "display_phone": "(303) 839-1394", "distance": 541.9058239564879}, {"id":
+        "whMF9UFpUrtalDgqr_yENw", "alias": "kingas-lounge-denver", "name": "Kinga''s
+        Lounge", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/NbU1S5qAAFz2g_4tjLeqFA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/kingas-lounge-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 267, "categories": [{"alias": "lounges", "title": "Lounges"},
+        {"alias": "polish", "title": "Polish"}, {"alias": "breakfast_brunch", "title":
+        "Breakfast & Brunch"}], "rating": 3.5, "coordinates": {"latitude": 39.74019,
+        "longitude": -104.9723099}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "1509 Marion St", "address2": "", "address3":
+        "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
+        "display_address": ["1509 Marion St", "Denver, CO 80218"]}, "phone": "+13038306922",
+        "display_phone": "(303) 830-6922", "distance": 547.1323479378951}, {"id":
+        "-7AgflI0MNLAimyFb6T5tQ", "alias": "good-times-burgers-and-frozen-custard-denver-11",
+        "name": "Good Times Burgers & Frozen Custard", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/egcncqdw79ndZ5f3nVVVyQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/good-times-burgers-and-frozen-custard-denver-11?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 98, "categories": [{"alias": "hotdogs", "title": "Fast Food"},
+        {"alias": "burgers", "title": "Burgers"}, {"alias": "icecream", "title": "Ice
+        Cream & Frozen Yogurt"}], "rating": 3.0, "coordinates": {"latitude": 39.7397363,
+        "longitude": -104.9771641}, "transactions": ["delivery", "pickup"], "price":
+        "$", "location": {"address1": "808 E Colfax Ave", "address2": "", "address3":
+        "", "city": "Denver", "zip_code": "80218", "country": "US", "state": "CO",
+        "display_address": ["808 E Colfax Ave", "Denver, CO 80218"]}, "phone": "+13038308060",
+        "display_phone": "(303) 830-8060", "distance": 754.5534518484365}, {"id":
+        "HA6_8IsyxUr6eItoMpQYLg", "alias": "illegal-petes-colfax-denver-4", "name":
+        "Illegal Pete''s - Colfax", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/X-sD1GncE3uJzp8r0KeubA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/illegal-petes-colfax-denver-4?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 226, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
+        "mexican", "title": "Mexican"}, {"alias": "breakfast_brunch", "title": "Breakfast
+        & Brunch"}], "rating": 4.0, "coordinates": {"latitude": 39.74024120000001,
+        "longitude": -104.9632766}, "transactions": ["delivery", "pickup"], "price":
+        "$", "location": {"address1": "2001 E Colfax Ave", "address2": "", "address3":
+        "", "city": "Denver", "zip_code": "80206", "country": "US", "state": "CO",
+        "display_address": ["2001 E Colfax Ave", "Denver, CO 80206"]}, "phone": "+17207232703",
+        "display_phone": "(720) 723-2703", "distance": 793.8319896130849}, {"id":
+        "VryvMiOjGlSTyR6EbopvMg", "alias": "the-district-denver-10", "name": "The
+        District", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/eowRQnjyzkfi1p-3S6ciYg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/the-district-denver-10?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 441, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "bars", "title": "Bars"}, {"alias": "breakfast_brunch",
+        "title": "Breakfast & Brunch"}], "rating": 3.5, "coordinates": {"latitude":
+        39.7429773002728, "longitude": -104.970145}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "1320 E 17th Ave", "address2":
+        "", "address3": "", "city": "Denver", "zip_code": "80218", "country": "US",
+        "state": "CO", "display_address": ["1320 E 17th Ave", "Denver, CO 80218"]},
+        "phone": "+13038136688", "display_phone": "(303) 813-6688", "distance": 828.7890893100515},
+        {"id": "ifFJPXzMMPMDn-RbXrcnjw", "alias": "patxis-pizza-denver-5", "name":
+        "Patxi''s Pizza", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/c8Wh43BxSCqZOXUshfS-oQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/patxis-pizza-denver-5?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 439, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "salad", "title": "Salad"}, {"alias": "italian", "title": "Italian"}],
+        "rating": 4.0, "coordinates": {"latitude": 39.74304, "longitude": -104.96859},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "1598 E 17th Ave", "address2": null, "address3": "", "city": "Denver", "zip_code":
+        "80218", "country": "US", "state": "CO", "display_address": ["1598 E 17th
+        Ave", "Denver, CO 80218"]}, "phone": "+13038328000", "display_phone": "(303)
+        832-8000", "distance": 852.7251908173092}, {"id": "o-i3q1AA1QFCK9EmaQc52w",
+        "alias": "sullivan-scrap-kitchen-denver-2", "name": "Sullivan Scrap Kitchen",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/eFIseqKUaLpAKdACX7FlZQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/sullivan-scrap-kitchen-denver-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 38, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias":
+        "burgers", "title": "Burgers"}], "rating": 4.5, "coordinates": {"latitude":
+        39.74299, "longitude": -104.96615}, "transactions": ["delivery", "pickup"],
+        "price": "$$", "location": {"address1": "1740 E 17th Ave", "address2": null,
+        "address3": "", "city": "Denver", "zip_code": "80218", "country": "US", "state":
+        "CO", "display_address": ["1740 E 17th Ave", "Denver, CO 80218"]}, "phone":
+        "+17202426292", "display_phone": "(720) 242-6292", "distance": 903.3680704294974},
+        {"id": "vyPPcw3xOiDgKiQXY2Xjxg", "alias": "x-bar-denver", "name": "X BAR",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/k5cA82za3C7IxQwHwuJTYg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/x-bar-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 113, "categories": [{"alias": "gaybars", "title": "Gay Bars"}],
+        "rating": 3.5, "coordinates": {"latitude": 39.74014, "longitude": -104.97902},
+        "transactions": [], "price": "$$", "location": {"address1": "629 E Colfax
+        Ave", "address2": "", "address3": "", "city": "Denver", "zip_code": "80203",
+        "country": "US", "state": "CO", "display_address": ["629 E Colfax Ave", "Denver,
+        CO 80203"]}, "phone": "+13038322687", "display_phone": "(303) 832-2687", "distance":
+        914.0375879607766}, {"id": "ZntgdCiWJjAfP2N3Jht7MQ", "alias": "stoneys-uptown-denver",
+        "name": "Stoney''s Uptown", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/kjxdA2hU3uSQsrJpzLVMDw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/stoneys-uptown-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 152, "categories": [{"alias": "sportsbars", "title": "Sports
+        Bars"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
+        "tradamerican", "title": "American (Traditional)"}], "rating": 4.0, "coordinates":
+        {"latitude": 39.74348117433856, "longitude": -104.97365978220878}, "transactions":
+        ["delivery", "pickup"], "price": "$$", "location": {"address1": "1035 E 17th
         Ave", "address2": null, "address3": "", "city": "Denver", "zip_code": "80218",
-        "country": "US", "state": "CO", "display_address": ["1420 E 18th Ave", "Denver,
-        CO 80218"]}, "phone": "+13039540877", "display_phone": "(303) 954-0877", "distance":
-        1019.671672484495}, {"id": "1Tfuh19QtBcCu5p970nDuw", "alias": "roostercat-coffee-house-denver-4",
+        "country": "US", "state": "CO", "display_address": ["1035 E 17th Ave", "Denver,
+        CO 80218"]}, "phone": "+17204855503", "display_phone": "(720) 485-5503", "distance":
+        931.6953910725164}, {"id": "5lCzYPnAoNNlAZxW3rr_RA", "alias": "satchels-on-6th-denver",
+        "name": "Satchel''s on 6th", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/u3xLS0XwgGLpupXFLx47Xw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/satchels-on-6th-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 170, "categories": [{"alias": "newamerican", "title": "American
+        (New)"}, {"alias": "cocktailbars", "title": "Cocktail Bars"}], "rating": 4.0,
+        "coordinates": {"latitude": 39.72545, "longitude": -104.96674}, "transactions":
+        ["delivery"], "price": "$$", "location": {"address1": "1710 E 6th Ave", "address2":
+        "", "address3": "", "city": "Denver", "zip_code": "80218", "country": "US",
+        "state": "CO", "display_address": ["1710 E 6th Ave", "Denver, CO 80218"]},
+        "phone": "+13033992560", "display_phone": "(303) 399-2560", "distance": 1163.8531366695668},
+        {"id": "7UWt_282vPsGQPtrquRR9Q", "alias": "shells-and-sauce-denver", "name":
+        "Shells & Sauce", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yRY-S3uHuPXNAQj9VvMroQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/shells-and-sauce-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 898, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "bars", "title": "Bars"}, {"alias": "salad", "title": "Salad"}],
+        "rating": 4.0, "coordinates": {"latitude": 39.735020342619, "longitude": -104.95613854543},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "2600 E 12th Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80206", "country": "US", "state": "CO", "display_address": ["2600 E 12th
+        Ave", "Denver, CO 80206"]}, "phone": "+13033772091", "display_phone": "(303)
+        377-2091", "distance": 1207.5670962222423}, {"id": "OAq-C2Nb6214refR5DgrBw",
+        "alias": "uno-mas-taqueria-denver-3", "name": "Uno Mas Taqueria", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/qaVbj54012dANJxP2RmLPw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/uno-mas-taqueria-denver-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 228, "categories": [{"alias": "venues", "title": "Venues &
+        Event Spaces"}, {"alias": "desserts", "title": "Desserts"}, {"alias": "tacos",
+        "title": "Tacos"}], "rating": 4.0, "coordinates": {"latitude": 39.7254099,
+        "longitude": -104.97786}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "730 E 6th Ave", "address2": null, "address3":
+        "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
+        "display_address": ["730 E 6th Ave", "Denver, CO 80203"]}, "phone": "+17207084623",
+        "display_phone": "(720) 708-4623", "distance": 1306.0945245961598}, {"id":
+        "zgvqw-I07hQYhIQwSSCiQg", "alias": "brothers-bbq-denver-5", "name": "Brothers
+        BBQ", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/RQMpMHPUCG9-5XQ7CjNqqA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/brothers-bbq-denver-5?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 169, "categories": [{"alias": "bbq", "title": "Barbeque"},
+        {"alias": "southern", "title": "Southern"}], "rating": 3.5, "coordinates":
+        {"latitude": 39.7253, "longitude": -104.97843}, "transactions": ["delivery"],
+        "price": "$$", "location": {"address1": "568 N Washington St", "address2":
+        "", "address3": "", "city": "Denver", "zip_code": "80203", "country": "US",
+        "state": "CO", "display_address": ["568 N Washington St", "Denver, CO 80203"]},
+        "phone": "+17205704227", "display_phone": "(720) 570-4227", "distance": 1328.2386987278412},
+        {"id": "6OQ7HXYL9TTMY7ooM2rkhA", "alias": "stoneys-bar-and-grill-denver",
+        "name": "Stoney''s Bar and Grill", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/6cvujifMU8X2Bo_ghadfaQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/stoneys-bar-and-grill-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 458, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "sportsbars", "title": "Sports Bars"}, {"alias":
+        "musicvenues", "title": "Music Venues"}], "rating": 3.5, "coordinates": {"latitude":
+        39.7342314, "longitude": -104.986504}, "transactions": ["delivery", "pickup"],
+        "price": "$$", "location": {"address1": "1111 Lincoln St", "address2": "",
+        "address3": "", "city": "Denver", "zip_code": "80203", "country": "US", "state":
+        "CO", "display_address": ["1111 Lincoln St", "Denver, CO 80203"]}, "phone":
+        "+13038306839", "display_phone": "(303) 830-6839", "distance": 1397.6881526523282},
+        {"id": "1Tfuh19QtBcCu5p970nDuw", "alias": "roostercat-coffee-house-denver-4",
         "name": "Roostercat Coffee House", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/jR8fiUtFdOi5XTuNLBExhA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/roostercat-coffee-house-denver-4?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
         "review_count": 283, "categories": [{"alias": "coffee", "title": "Coffee &
@@ -107,174 +235,49 @@ http_interactions:
         "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
         "display_address": ["1045 Lincoln St", "Denver, CO 80203"]}, "phone": "+17203880356",
         "display_phone": "(720) 388-0356", "distance": 1417.7086739286015}, {"id":
-        "rPQtcHEKEGCjjL8pXyYKSw", "alias": "amethyst-coffee-company-denver", "name":
-        "Amethyst Coffee Company", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/r_-W8768kqEcALpzQjN0QQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/amethyst-coffee-company-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 268, "categories": [{"alias": "cafes", "title": "Cafes"},
-        {"alias": "coffee", "title": "Coffee & Tea"}], "rating": 4.0, "coordinates":
-        {"latitude": 39.73406, "longitude": -104.98787}, "transactions": ["delivery"],
-        "price": "$", "location": {"address1": "1111 Broadway St", "address2": "Ste
-        101", "address3": "", "city": "Denver", "zip_code": "80203", "country": "US",
-        "state": "CO", "display_address": ["1111 Broadway St", "Ste 101", "Denver,
-        CO 80203"]}, "phone": "", "display_phone": "", "distance": 1512.4780433633034},
-        {"id": "FcyalVpVWzOHCYJnQDTLPw", "alias": "leven-deli-denver-8", "name": "Leven
-        Deli", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/gLVMeAjAx-SlgRABvG8CBA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/leven-deli-denver-8?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 274, "categories": [{"alias": "delis", "title": "Delis"},
-        {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "wine_bars", "title":
-        "Wine Bars"}], "rating": 4.5, "coordinates": {"latitude": 39.73547386, "longitude":
-        -104.98984114}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
-        {"address1": "123 W 12th Ave", "address2": "", "address3": null, "city": "Denver",
-        "zip_code": "80204", "country": "US", "state": "CO", "display_address": ["123
-        W 12th Ave", "Denver, CO 80204"]}, "phone": "+13033255691", "display_phone":
-        "(303) 325-5691", "distance": 1675.628880964664}, {"id": "3E-cs5eSPnWnjeJp7sC3ZQ",
-        "alias": "whittier-cafe-denver-2", "name": "Whittier Cafe", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/lWl8Y0FB9CBuqgbXMjD1pw/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/whittier-cafe-denver-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 114, "categories": [{"alias": "coffee", "title": "Coffee &
-        Tea"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
-        "sandwiches", "title": "Sandwiches"}], "rating": 4.5, "coordinates": {"latitude":
-        39.7530209, "longitude": -104.9668592}, "transactions": ["delivery"], "price":
-        "$", "location": {"address1": "1710 E 25th Ave", "address2": "", "address3":
-        "", "city": "Denver", "zip_code": "80205", "country": "US", "state": "CO",
-        "display_address": ["1710 E 25th Ave", "Denver, CO 80205"]}, "phone": "+17205507440",
-        "display_phone": "(720) 550-7440", "distance": 1966.9635296839333}, {"id":
-        "codAlcyCeWgjGHjtScQA3A", "alias": "waffle-brothers-denver-5", "name": "Waffle
-        Brothers", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/EOrcIfpzMe__o2jlR-y5-Q/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/waffle-brothers-denver-5?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 248, "categories": [{"alias": "breakfast_brunch", "title":
-        "Breakfast & Brunch"}, {"alias": "coffee", "title": "Coffee & Tea"}, {"alias":
-        "waffles", "title": "Waffles"}], "rating": 4.0, "coordinates": {"latitude":
-        39.7182, "longitude": -104.979}, "transactions": ["delivery", "pickup"], "price":
-        "$", "location": {"address1": "700 E 1st Ave", "address2": "", "address3":
+        "IhdFeUHNdlmN22Yv3xLHEA", "alias": "100-de-agave-denver-3", "name": "100%
+        de Agave", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/GU1b7N6kXC4x_g0QoE3nBQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/100-de-agave-denver-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 453, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "bars", "title": "Bars"}], "rating": 3.5, "coordinates": {"latitude":
+        39.7318820372198, "longitude": -104.98641371727}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "975 Lincoln St", "address2":
+        "", "address3": "", "city": "Denver", "zip_code": "80203", "country": "US",
+        "state": "CO", "display_address": ["975 Lincoln St", "Denver, CO 80203"]},
+        "phone": "+13037311100", "display_phone": "(303) 731-1100", "distance": 1440.6745977785263},
+        {"id": "YB-th2or0P4qyeF15SVrog", "alias": "vesper-lounge-denver", "name":
+        "Vesper Lounge", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/3zjyoEBbVjGMNLS2RX65Pg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/vesper-lounge-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 157, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias":
+        "lounges", "title": "Lounges"}], "rating": 4.0, "coordinates": {"latitude":
+        39.727429, "longitude": -104.983912}, "transactions": ["delivery"], "price":
+        "$$", "location": {"address1": "233 E 7th Ave", "address2": "", "address3":
         "", "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO",
-        "display_address": ["700 E 1st Ave", "Denver, CO 80203"]}, "phone": "+13037331212",
-        "display_phone": "(303) 733-1212", "distance": 2068.5632299335734}, {"id":
-        "eNkR4b43pza01xnQX541lA", "alias": "carbon-cafe-and-bar-five-points-denver",
-        "name": "Carbon Cafe and Bar - Five Points", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/DVcKtEZDAMw25HmjWC2nIA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/carbon-cafe-and-bar-five-points-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 85, "categories": [{"alias": "donuts", "title": "Donuts"},
-        {"alias": "gastropubs", "title": "Gastropubs"}, {"alias": "newamerican", "title":
-        "American (New)"}], "rating": 4.5, "coordinates": {"latitude": 39.7508597740297,
-        "longitude": -104.984622785821}, "transactions": [], "price": "$$", "location":
-        {"address1": "2200 California St", "address2": "", "address3": null, "city":
-        "Denver", "zip_code": "80205", "country": "US", "state": "CO", "display_address":
-        ["2200 California St", "Denver, CO 80205"]}, "phone": "", "display_phone":
-        "", "distance": 2102.122257600067}, {"id": "Ttk8uzixI-qX8LhdHINV9A", "alias":
-        "toro-latin-kitchen-and-lounge-denver-2", "name": "Toro Latin Kitchen & Lounge",
-        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/N5KWmJeQeVD8QEGJbicqLQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/toro-latin-kitchen-and-lounge-denver-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 103, "categories": [{"alias": "latin", "title": "Latin American"},
-        {"alias": "lounges", "title": "Lounges"}], "rating": 4.5, "coordinates": {"latitude":
-        39.718957, "longitude": -104.955457}, "transactions": ["delivery", "pickup"],
-        "location": {"address1": "150 Clayton Ln", "address2": "Ste B", "address3":
-        "", "city": "Denver", "zip_code": "80206", "country": "US", "state": "CO",
-        "display_address": ["150 Clayton Ln", "Ste B", "Denver, CO 80206"]}, "phone":
-        "+13032533000", "display_phone": "(303) 253-3000", "distance": 2234.674769143263},
-        {"id": "ETDxwYUjV3gR4NZE4Envbg", "alias": "urban-egg-cherry-creek-north-denver-5",
-        "name": "Urban Egg - Cherry Creek North", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/JNEc4tw6PBWvDl1smZcWeA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/urban-egg-cherry-creek-north-denver-5?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 71, "categories": [{"alias": "breakfast_brunch", "title":
-        "Breakfast & Brunch"}, {"alias": "burgers", "title": "Burgers"}, {"alias":
-        "tradamerican", "title": "American (Traditional)"}], "rating": 4.5, "coordinates":
-        {"latitude": 39.71879, "longitude": -104.95159}, "transactions": [], "price":
-        "$$", "location": {"address1": "3033 E 1st Ave", "address2": "", "address3":
-        null, "city": "Denver", "zip_code": "80206", "country": "US", "state": "CO",
-        "display_address": ["3033 E 1st Ave", "Denver, CO 80206"]}, "phone": "+17207983447",
-        "display_phone": "(720) 798-3447", "distance": 2476.4113180625764}, {"id":
-        "qUpvmSsFYxkQdnKOLeidnA", "alias": "max-market-denver", "name": "Max Market",
-        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/-_JGoEBgWGsoMx4dTSOAPg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/max-market-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 47, "categories": [{"alias": "delis", "title": "Delis"}, {"alias":
-        "grocery", "title": "Grocery"}, {"alias": "sandwiches", "title": "Sandwiches"}],
-        "rating": 4.0, "coordinates": {"latitude": 39.7526, "longitude": -104.9907999},
-        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
-        "2020 Lawrence St", "address2": "Unit B", "address3": "", "city": "Denver",
-        "zip_code": "80205", "country": "US", "state": "CO", "display_address": ["2020
-        Lawrence St", "Unit B", "Denver, CO 80205"]}, "phone": "+13039789530", "display_phone":
-        "(303) 978-9530", "distance": 2582.4364653240905}, {"id": "XluydvQpT75gjiuRSclhcQ",
-        "alias": "the-denver-central-market-denver-2", "name": "The Denver Central
-        Market", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/rJVSKFwGGC-TRUFEqSV2XA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/the-denver-central-market-denver-2?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 447, "categories": [{"alias": "bakeries", "title": "Bakeries"},
-        {"alias": "meats", "title": "Meat Shops"}, {"alias": "food_court", "title":
-        "Food Court"}], "rating": 4.5, "coordinates": {"latitude": 39.75949, "longitude":
-        -104.98465}, "transactions": [], "price": "$$", "location": {"address1": "2669
-        Larimer St", "address2": "", "address3": null, "city": "Denver", "zip_code":
-        "80205", "country": "US", "state": "CO", "display_address": ["2669 Larimer
-        St", "Denver, CO 80205"]}, "phone": "", "display_phone": "", "distance": 2921.008884449675},
-        {"id": "LPKFdZGomFwx745W8BlAkA", "alias": "sono-slurps-denver", "name": "S''ono!
-        / Slurps!", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/80tg_HRjYo07CgXHNWpc9w/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/sono-slurps-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 69, "categories": [{"alias": "asianfusion", "title": "Asian
-        Fusion"}, {"alias": "poke", "title": "Poke"}], "rating": 4.5, "coordinates":
-        {"latitude": 39.7463572, "longitude": -105.0072577}, "transactions": ["pickup",
-        "delivery"], "price": "$", "location": {"address1": "900 Auraria Pkwy", "address2":
-        null, "address3": "101-E", "city": "Denver", "zip_code": "80204", "country":
-        "US", "state": "CO", "display_address": ["900 Auraria Pkwy", "101-E", "Denver,
-        CO 80204"]}, "phone": "+13039539147", "display_phone": "(303) 953-9147", "distance":
-        3234.4946347877653}, {"id": "-tcQ56G-XyaYagVCpWi1nQ", "alias": "blue-sparrow-coffee-denver",
-        "name": "Blue Sparrow Coffee", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1FPaARY8dy3uft9oeHcYWQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/blue-sparrow-coffee-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 155, "categories": [{"alias": "coffee", "title": "Coffee &
-        Tea"}, {"alias": "cafes", "title": "Cafes"}, {"alias": "beerbar", "title":
-        "Beer Bar"}], "rating": 4.5, "coordinates": {"latitude": 39.764418, "longitude":
-        -104.981097}, "transactions": ["delivery"], "price": "$", "location": {"address1":
-        "3070 Blake St", "address2": "Unit 180", "address3": "", "city": "Denver",
-        "zip_code": "80205", "country": "US", "state": "CO", "display_address": ["3070
-        Blake St", "Unit 180", "Denver, CO 80205"]}, "phone": "", "display_phone":
-        "", "distance": 3344.099197243606}, {"id": "29UlUzkFIG_NqOnM0W_tNw", "alias":
-        "improper-city-denver", "name": "Improper City", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/BC2ZmZHcX_BeIgPXOtHEuQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/improper-city-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 117, "categories": [{"alias": "foodtrucks", "title": "Food
-        Trucks"}, {"alias": "coffee", "title": "Coffee & Tea"}, {"alias": "cocktailbars",
-        "title": "Cocktail Bars"}], "rating": 4.0, "coordinates": {"latitude": 39.7650829371933,
-        "longitude": -104.9789802434}, "transactions": [], "price": "$$", "location":
-        {"address1": "3201 Walnut St", "address2": "Ste 101", "address3": null, "city":
-        "Denver", "zip_code": "80205", "country": "US", "state": "CO", "display_address":
-        ["3201 Walnut St", "Ste 101", "Denver, CO 80205"]}, "phone": "+17206660043",
-        "display_phone": "(720) 666-0043", "distance": 3370.539957714349}, {"id":
-        "Np2ql_MBrkZtJ3cJDcR8dg", "alias": "rivers-and-roads-coffee-denver", "name":
-        "Rivers and Roads Coffee", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Nha3gRx3hG9KkNLEoLva3A/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/rivers-and-roads-coffee-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 202, "categories": [{"alias": "coffee", "title": "Coffee &
-        Tea"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
-        "gluten_free", "title": "Gluten-Free"}], "rating": 4.5, "coordinates": {"latitude":
-        39.764677, "longitude": -104.956443}, "transactions": ["delivery"], "price":
-        "$$", "location": {"address1": "2539 E Bruce Randolph Ave", "address2": "",
-        "address3": null, "city": "Denver", "zip_code": "80205", "country": "US",
-        "state": "CO", "display_address": ["2539 E Bruce Randolph Ave", "Denver, CO
-        80205"]}, "phone": "+13033213052", "display_phone": "(303) 321-3052", "distance":
-        3457.1075686373993}, {"id": "YmgraZOAwbt1C2QlbCJOOA", "alias": "lekker-coffee-and-watering-hole-denver",
-        "name": "Lekker Coffee & Watering Hole", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/HP0N1IfXwVrJPjflPyHBTA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/lekker-coffee-and-watering-hole-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 50, "categories": [{"alias": "coffee", "title": "Coffee &
-        Tea"}, {"alias": "lounges", "title": "Lounges"}], "rating": 5.0, "coordinates":
-        {"latitude": 39.76674467, "longitude": -104.97445367}, "transactions": [],
-        "location": {"address1": "3460 Larimer St", "address2": null, "address3":
-        "", "city": "Denver", "zip_code": "80205", "country": "US", "state": "CO",
-        "display_address": ["3460 Larimer St", "Denver, CO 80205"]}, "phone": "+17208331423",
-        "display_phone": "(720) 833-1423", "distance": 3484.3106027849894}, {"id":
-        "BLafeTCiAblDCmZPcEdLEA", "alias": "whole-sol-blend-bar-denver-4", "name":
-        "Whole Sol Blend Bar", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/507LpiTlfpeAVxeMJzlfPA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/whole-sol-blend-bar-denver-4?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 5, "categories": [{"alias": "juicebars", "title": "Juice Bars
-        & Smoothies"}, {"alias": "acaibowls", "title": "Acai Bowls"}, {"alias": "vegan",
-        "title": "Vegan"}], "rating": 4.0, "coordinates": {"latitude": 39.76895154891867,
-        "longitude": -104.97377697262105}, "transactions": ["delivery", "pickup"],
-        "location": {"address1": "3605 Walnut St", "address2": "", "address3": null,
-        "city": "Denver", "zip_code": "80205", "country": "US", "state": "CO", "display_address":
-        ["3605 Walnut St", "Denver, CO 80205"]}, "phone": "", "display_phone": "",
-        "distance": 3729.187492621452}, {"id": "RNgAnvc_QsnUoT7gP5mfUQ", "alias":
-        "just-be-kitchen-denver", "name": "Just BE Kitchen", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/S2dT3k_nryF9CY7bUO12Hw/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/just-be-kitchen-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
-        "review_count": 332, "categories": [{"alias": "gluten_free", "title": "Gluten-Free"},
-        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias": "newamerican",
-        "title": "American (New)"}], "rating": 4.0, "coordinates": {"latitude": 39.7559428721647,
-        "longitude": -105.00915}, "transactions": ["pickup", "delivery"], "price":
-        "$$", "location": {"address1": "2364 15th St", "address2": "", "address3":
-        null, "city": "Denver", "zip_code": "80202", "country": "US", "state": "CO",
-        "display_address": ["2364 15th St", "Denver, CO 80202"]}, "phone": "+13032846652",
-        "display_phone": "(303) 284-6652", "distance": 4027.234313237323}], "total":
-        128, "region": {"center": {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Mon, 08 Nov 2021 16:21:09 GMT
+        "display_address": ["233 E 7th Ave", "Denver, CO 80203"]}, "phone": "+17203280314",
+        "display_phone": "(720) 328-0314", "distance": 1475.1617370380188}, {"id":
+        "3asUEG-iok2bunLBp1O_mw", "alias": "lowdown-brewery-kitchen-denver", "name":
+        "Lowdown Brewery + Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/4BVCLbTZXqdo_rDVwc5Ezg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lowdown-brewery-kitchen-denver?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 493, "categories": [{"alias": "breweries", "title": "Breweries"},
+        {"alias": "newamerican", "title": "American (New)"}, {"alias": "pizza", "title":
+        "Pizza"}], "rating": 4.5, "coordinates": {"latitude": 39.7293891906738, "longitude":
+        -104.985748291016}, "transactions": ["delivery", "pickup"], "price": "$$",
+        "location": {"address1": "800 Lincoln St", "address2": "", "address3": "",
+        "city": "Denver", "zip_code": "80203", "country": "US", "state": "CO", "display_address":
+        ["800 Lincoln St", "Denver, CO 80203"]}, "phone": "+17205248065", "display_phone":
+        "(720) 524-8065", "distance": 1491.6134415581314}, {"id": "N3HEM2GYWu8UKcXEe2lAHw",
+        "alias": "anise-modern-vietnamese-eatery-denver-3", "name": "Anise, Modern
+        Vietnamese Eatery", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/518qpp7NtyNlYLIyulLzAA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/anise-modern-vietnamese-eatery-denver-3?adjust_creative=OBMoK3r2ftITcAO2w2E5Ew&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OBMoK3r2ftITcAO2w2E5Ew",
+        "review_count": 247, "categories": [{"alias": "vietnamese", "title": "Vietnamese"},
+        {"alias": "vegetarian", "title": "Vegetarian"}, {"alias": "noodles", "title":
+        "Noodles"}], "rating": 4.5, "coordinates": {"latitude": 39.73031, "longitude":
+        -104.9863}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
+        "865 N Lincoln St", "address2": null, "address3": "", "city": "Denver", "zip_code":
+        "80203", "country": "US", "state": "CO", "display_address": ["865 N Lincoln
+        St", "Denver, CO 80203"]}, "phone": "+13038303934", "display_phone": "(303)
+        830-3934", "distance": 1495.906962978679}], "total": 240, "region": {"center":
+        {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
+  recorded_at: Wed, 10 Nov 2021 00:18:41 GMT
 recorded_with: VCR 6.0.0

@@ -6,8 +6,14 @@ class Api::V1::PlayDatesController < ApplicationController
       dog = Dog.find(params[:dog_id])
       render json: DogWithPlaydatesSerializer.new(dog)
     else
-      render json: PlayDateSerializer.new(PlayDate.for_user(params[:user_id]))
+      render json: PlayDateSerializer.new(PlayDateFacade.user_play_dates(params))
     end
+  end
+
+  def show
+    playdate = PlayDate.find(params[:id])
+
+    render json: PlayDateSerializer.new(playdate)
   end
 
   def create
@@ -15,9 +21,7 @@ class Api::V1::PlayDatesController < ApplicationController
   end
 
   def update
-    play_date = PlayDate.find_by(creator_dog_id: params[:creator_dog], invited_dog_id: params[:invited_dog])
-
-    raise ActiveRecord::RecordNotFound unless play_date
+    play_date = PlayDate.find(params[:id])
 
     play_date.update_attribute(:invite_status, params[:status].to_i)
   end
@@ -25,11 +29,7 @@ class Api::V1::PlayDatesController < ApplicationController
   private
 
   def validate_update_params
-    raise ActionController::BadRequest unless valid_status? && dogs_present?
-  end
-
-  def dogs_present?
-    params[:creator_dog].present? && params[:invited_dog].present?
+    raise ActionController::BadRequest unless valid_status?
   end
 
   def valid_status?

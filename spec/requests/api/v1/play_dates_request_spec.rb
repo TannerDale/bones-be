@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Api::V1::PlayDatesController, :vcr do
   describe 'GET /v1/play_dates' do
     let!(:dogs) { create_list :dog, 5 }
-    let!(:dog) { dogs.first }
+    let!(:dog) { create :dog, user_id: 1 }
 
     let(:json) { JSON.parse(response.body, symbolize_names: true) }
     let(:data) { json[:data] }
@@ -17,6 +17,7 @@ describe Api::V1::PlayDatesController, :vcr do
       end
       dogs[3..4].each do |d|
         create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id, invite_status: 1
+        create :play_date, creator_dog_id: d.id, invited_dog_id: dog.id, invite_status: 0
       end
     end
 
@@ -25,6 +26,18 @@ describe Api::V1::PlayDatesController, :vcr do
       expect(attributes.size).to eq(11)
       expect(pending_play_dates.size).to eq(2)
       expect(accepted_play_dates.size).to eq(2)
+    end
+
+    it 'has all of the users pending invites' do
+      get api_v1_play_dates_path, params: { user_id: 1, status: 'invited' }
+
+      expect(data.size).to eq(2)
+    end
+
+    it 'has all of the users playdates' do
+      get api_v1_play_dates_path, params: { user_id: 1, status: 'all' }
+
+      expect(data.size).to eq(6)
     end
   end
 
@@ -124,28 +137,16 @@ describe Api::V1::PlayDatesController, :vcr do
         expect(play_date.invite_status).to eq('accepted')
       end
 
-      it 'updates the playdates invite status to rejected' do
+      it 'deletes the playdate if the status is rejected' do
+        id = play_date.id
+
         patch api_v1_play_date_path(play_date), params: params.merge({ status: 2 })
 
-        play_date.reload
-
-        expect(play_date.invite_status).to eq('rejected')
+        expect(PlayDate.where(id: id)).to be_empty
       end
     end
 
     context 'with invalid params' do
-      it 'returns 400 if no creator_dog' do
-        patch api_v1_play_date_path(play_date), params: { invited_dog_id: invited_dog, status: 1 }
-
-        expect(response).to have_http_status 400
-      end
-
-      it 'returns 400 if no invited_dog' do
-        patch api_v1_play_date_path(play_date), params: { creator_dog_id: creator_dog, status: 1 }
-
-        expect(response).to have_http_status 400
-      end
-
       it 'returns 400 if no status' do
         patch api_v1_play_date_path(play_date), params: params
 
@@ -162,6 +163,31 @@ describe Api::V1::PlayDatesController, :vcr do
         patch api_v1_play_date_path(play_date), params: params.merge({ status: 3, creator_dog_id: 111_111 })
 
         expect(response).to have_http_status 400
+      end
+    end
+  end
+
+  describe 'GET /v1/play_dates/:id' do
+    let!(:dog1) { create :dog, user_id: 1 }
+    let!(:dog2) { create :dog, user_id: 1 }
+    let!(:play_date) { create :play_date, creator_dog_id: dog1.id, invited_dog_id: dog2.id }
+    let(:json) { JSON.parse(response.body, symbolize_names: true) }
+    let(:data) { json[:data] }
+
+    context 'with a valid play_date id' do
+      before { get api_v1_play_date_path(play_date.id) }
+
+      it 'has the info for the play_date' do
+        expect(data[:id].to_i).to eq(play_date.id)
+        expect(data[:attributes].size).to eq(4)
+      end
+    end
+
+    context 'with invalid play date id' do
+      before { get api_v1_play_date_path(1_929_394_029_301) }
+
+      it 'returns 404' do
+        expect(response).to have_http_status(404)
       end
     end
   end

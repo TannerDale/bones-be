@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '153'
+      Server:
+      - Werkzeug/2.0.1 Python/3.9.5
+      Date:
+      - Wed, 10 Nov 2021 00:54:38 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: |
+        [
+          {
+            "fact": "Dogs sometimes appear to smile -- much like humans -- with open mouth grinning. This may indicate a relaxed, submissive state."
+          }
+        ]
+  recorded_at: Wed, 10 Nov 2021 00:54:38 GMT
+recorded_with: VCR 6.0.0
