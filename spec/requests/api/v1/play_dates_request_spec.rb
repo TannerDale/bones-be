@@ -21,13 +21,6 @@ describe Api::V1::PlayDatesController, :vcr do
       end
     end
 
-    it 'has all the dogs playdates' do
-      get api_v1_dog_play_dates_path(dog.id)
-      expect(attributes.size).to eq(11)
-      expect(pending_play_dates.size).to eq(2)
-      expect(accepted_play_dates.size).to eq(2)
-    end
-
     it 'has all of the users pending invites' do
       get api_v1_play_dates_path, params: { user_id: 1, status: 'invited' }
 
