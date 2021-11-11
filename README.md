@@ -2,17 +2,16 @@
 
 [![Build Status][travis-image]][travis-url]
 
-#### [🦴🐶 Bones Front-End 🐾🦴](https://github.com/TannerDale/bones-fe)
+#### [🦴🐶 Bones Front-End Repo 🐾🦴](https://github.com/TannerDale/bones-fe)
+#### [🦴🐶 Bones App 🐾🦴](https://bonez.herokuapp.com/)
 
 ## Table of contents
 - [Overview](#overview)
-- [Learning Goals](#learning-goals)
 - [Setup](#setup)
 - [Schema](#schema)
-- [Wireframes](#wireframes)
+- [Project Board](#project-board)
 - [API](#api)
 - [Endpoints](#endpoints)
-- [Project Board](#project-board)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
@@ -21,50 +20,24 @@
 # BONES
 🦴 is a web application that addresses the lack of ability for pet owners to meet at dog friendly locations, connect, and build relationships with others through their shared passion for their dogs and dogs in general. Book a playdate for your furbaby! 🐶 🎾
 
-### <ins>Learning Goals</ins>
-<b>Explicit Technical Expectations:</b> Below are technical goals that are being applied in this project (ordered by priority).
-- Consume two or more external APIs
-- Build APIs that return JSON responses
-- Use an external OAuth provider to authenticate users
-- Refactor code for better code organization/readability
-- Create a project with a separate frontend and backend
-- Implement a production-quality user interface using Bootstrap or other common CSS styling framework
-
-<b>Explicit Professional Expectations:</b> Below are technical goals that are being applied in this project (ordered by priority).
-- Practice good project management by using project boards, participating in daily stand-ups and team retros
-- Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews
-- Write thorough, understandable documentation
-
-<b>Implicit Learning Goals:</b> Below are skills that are more general/necessary on the job that are practiced by completing the goals above.
-- Reading Documentation
-- Time management
-- Prioritizing work
-- Breaking down large project into small pieces
-- Breaking down a problem into small steps
-- Practice individual research (articles, videos, mentors)
-- Self-advocacy in a team
-
-More details can be found [here](https://backend.turing.edu/module3/projects/consultancy/project_goals)
+This project was based off Turing's consultancy project. More details can be found [here](https://backend.turing.edu/module3/projects/consultancy/project_goals)
 
 ### <ins>Setup</ins>
 1. Fork and Clone the repo
 2. Install gem packages: `bundle install`
 3. Setup the database: `rails db:{drop,create,migrate}`
-
+4. Run `bundle exec rspec` to test
 ### <ins>Schema</ins>
-![Schema Screenshot]()
+![Schema Screenshot](https://user-images.githubusercontent.com/80985215/141348603-af7bcd77-c679-42e0-ac17-ce362a007abd.png)
 
-### <ins>Wireframes</ins>
-![Wireframes](https://miro.com/app/board/o9J_lmB3-wU=/)
+### <ins>Project Board</ins>
+![Project-Board](https://github.com/users/TannerDale/projects/5)
 
 ### <ins>API</ins>
 ![Schema Screenshot]()
 
 ### <ins>Endpoints</ins>
 ![Endpoints](https://gist.github.com/JeJones21/bf5b528046c6d5d80e1d8a0bda625387)
-
-### <ins>Project Board</ins>
-![Project-Board](https://github.com/users/TannerDale/projects/5)
 
 ### <ins>Technologies</ins>
 
@@ -74,13 +47,11 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 
 #### Development
 ![Atom][Atom-img]
-![Bcrypt][Bcrypt-img]
 ![Figaro][Figaro-img]
 ![Git][Git-img]
 ![Github][Github-img]
 ![Markdown][Markdown-img]
 ![PostgreSQL][PostgreSQL-img]
-![Postico][Postico-img]
 ![Postman][Postman-img]
 ![Rubocop][Rubocop-img]
 ![Ruby on Rails][Ruby on Rails-img]
@@ -131,14 +102,12 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 
 <!-- #### Development -->
 [Atom-img]: https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white
-[Bcrypt-img]: https://img.shields.io/badge/bcrypt-b81818.svg?&style=flaste&logo=rubygems&logoColor=white
 [Bootstrap-img]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Figaro-img]: https://img.shields.io/badge/figaro-b81818.svg?&style=flaste&logo=rubygems&logoColor=white
 [Git-img]: https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white
 [Github-img]: https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white
 [Markdown-img]: https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white
 [PostgreSQL-img]: https://img.shields.io/badge/PostgreSQL-4169E1.svg?&style=flaste&logo=postgresql&logoColor=white
-[Postico-img]: https://img.shields.io/badge/postico-b81818.svg?&style=flaste&logo=rubygems&logoColor=white
 [Postman-img]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
 [Rubocop-img]: https://img.shields.io/badge/rubocop-b81818.svg?&style=flaste&logo=rubygems&logoColor=white
 [Ruby on Rails-img]: https://img.shields.io/badge/Ruby%20On%20Rails-b81818.svg?&style=flat&logo=rubyonrails&logoColor=white
