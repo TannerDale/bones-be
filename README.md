@@ -25,6 +25,7 @@ Required:
 - [Setup](#setup)
 - [Schema](#schema)
 - [API](#api)
+- [Endpoints](#endpoints)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
@@ -69,6 +70,9 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 
 ### <ins>API</ins>
 ![Schema Screenshot]()
+
+### <ins>Endpoints</ins>
+(https://gist.github.com/JeJones21/bf5b528046c6d5d80e1d8a0bda625387)
 
 ### <ins>Technologies</ins>
 
@@ -119,14 +123,12 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 - [Christina Delpone](https://www.linkedin.com/in/christinadelpone)
 - [Jessica Jones](https://www.linkedin.com/in/justjj/)
 - [Kevin Mugele](https://www.linkedin.com/in/kevinmugele/)
-- [Luis Arroyo](https://www.linkedin.com/in/luis-arroyo-65a954181/)
 - [Tanner Dale](https://www.linkedin.com/in/tannerdale/)
 
 ![Github][Github-img]
 - [Christina Delpone](https://github.com/cdelpone)
 - [Jessica Jones](https://github.com/JeJones21)
 - [Kevin Mugele](https://github.com/KevinMugele)
-- [Luis Arroyo](https://github.com/dat1guyluigi)
 - [Tanner Dale](https://github.com/TannerDale)
 
 
