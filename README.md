@@ -9,8 +9,10 @@
 - [Learning Goals](#learning-goals)
 - [Setup](#setup)
 - [Schema](#schema)
+- [Wireframes](#wireframes)
 - [API](#api)
 - [Endpoints](#endpoints)
+- [Project Board](#project-board)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
@@ -18,8 +20,6 @@
 
 # BONES
 🦴 is a web application that addresses the lack of ability for pet owners to meet at dog friendly locations, connect, and build relationships with others through their shared passion for their dogs and dogs in general. Book a playdate for your furbaby! 🐶 🎾
-
-[Wireframes](https://miro.com/app/board/o9J_lmB3-wU=/)
 
 ### <ins>Learning Goals</ins>
 <b>Explicit Technical Expectations:</b> Below are technical goals that are being applied in this project (ordered by priority).
@@ -54,11 +54,17 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 ### <ins>Schema</ins>
 ![Schema Screenshot]()
 
+### <ins>Wireframes</ins>
+![Wireframes](https://miro.com/app/board/o9J_lmB3-wU=/)
+
 ### <ins>API</ins>
 ![Schema Screenshot]()
 
 ### <ins>Endpoints</ins>
 ![Endpoints](https://gist.github.com/JeJones21/bf5b528046c6d5d80e1d8a0bda625387)
+
+### <ins>Project Board</ins>
+![Project-Board](https://github.com/users/TannerDale/projects/5)
 
 ### <ins>Technologies</ins>
 
@@ -162,7 +168,7 @@ More details can be found [here](https://backend.turing.edu/module3/projects/con
 [OOP-img]: https://img.shields.io/badge/OOP-b81818.svg?&style=flaste&logo=OOP&logoColor=white
 [TDD-img]: https://img.shields.io/badge/TDD-b87818.svg?&style=flaste&logo=TDD&logoColor=white
 [MVC-img]: https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white
-[REST-img]: https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white)
+[REST-img]: https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white
 
 <!-- ### <ins>Contributors</ins> -->
 [LinkedIn-img]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
