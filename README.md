@@ -37,7 +37,7 @@ This project was based off Turing's consultancy project. More details can be fou
 ![Schema Screenshot]()
 
 ### <ins>Endpoints</ins>
-![Endpoints](https://gist.github.com/JeJones21/bf5b528046c6d5d80e1d8a0bda625387)
+[Endpoints](https://gist.github.com/JeJones21/bf5b528046c6d5d80e1d8a0bda625387)
 
 ### <ins>Technologies</ins>
 
